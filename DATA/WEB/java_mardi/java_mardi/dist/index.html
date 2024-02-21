@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - JAVA_MARDI</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>MapboxGL</title>
+
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<style>
+#map {position:absolute; top:0; bottom:0; width:100%;}
+</style>
+
+</head>
+   
+<body>
+ 
+<!-- <div class="bandeau">
+    <h1>Ma carte de Rennes</h1>
+</div> -->
+ 
+<div id='map'></div>
+ 
+ <div class='menu'>
+    <div class='menu_overlay'>
+
+<hr>
+   <fieldset>
+   <label class="categoryLabel">Données de Mobilités</label>
+   
+     <div>
+      <input type="checkbox" id="schemaveloCB" value="schemavelo" onchange="switchlayer('schemavelo')"/>
+                <label for="schemaveloCB">Schéma vélo</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="VeloStarCB" value="VeloStar" onchange="switchlayer('VeloStar')" checked/>
+                <label for="VeloStarCB">Sations Vélos STAR</label>
+            </div>
+     
+            <div>
+                <input type="checkbox" id="ParcrelaisCB" value="Parcrelais" onchange="switchlayer('Parcrelais')" checked/>
+                <label for="ParcrelaisCB">Parc relais</label>
+            </div>
+     
+            <div>
+                <input type="checkbox" id="busCB" value="bus" onchange="switchlayer('bus')"/>
+                <label for="busCB">Position des bus en temps réel</label>
+            </div>
+        </fieldset>
+     
+      <hr>
+     
+        <fieldset>
+            <label class="categoryLabel">Activités</label>
+            <div>
+                <input type="checkbox" id="organismeCB" value="organisme" onchange="switchlayer('organisme')" />
+                <label for="organismeCB">Organismes</label>
+            </div>
+            <div>
+                <input type="checkbox" id="pubsCB" value="pubs" onchange="switchlayer('pubs')" />
+                <label for="pubsCB">Bars</label>
+            </div>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <label class="categoryLabel">Urbanisme</label>
+            <div>
+                <input type="checkbox" id="CadastreCB" value="Cadastre" onchange="switchlayer('Cadastre')" />
+                <label for="CadastreCB">Cadastre</label>
+            </div>
+            <div>
+                <input type="checkbox" id="batimentsCB" value="batiments" onchange="switchlayer('batiments')" />
+                <label for="batimentsCB">Bâtiment</label>
+            </div>
+            <div>
+                <input type="checkbox" id="PLUCB" value="PLU" onchange="switchlayer('PLU')" />
+                <label for="PLUCB">PLU</label>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+</div>
+
+<div id='ongletsgeo'>
+ 
+  <div class="btn-group-sm" role="group" aria-label="Small button group">
+   
+  <button type="button" id="Rennes" class="btn btn-outline-success">Vue départ</button>
+  <button type="button" id="Gare" class="btn btn-outline-primary">Gare SNCF</button>
+  <button type="button" id="Rennes1" class="btn btn-outline-info">Université Rennes 1</button>
+  <button type="button" id="Rennes2" class="btn btn-outline-danger">Université Rennes 2</button>
+</div>
+ 
+ 
+ 
+<script>
+   
+
+</script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

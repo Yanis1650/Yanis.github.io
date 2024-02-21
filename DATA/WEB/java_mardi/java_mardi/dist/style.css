@@ -1,0 +1,77 @@
+#map {
+  position:absolute;
+  top:50px;
+  bottom:0;
+  width:100%;
+}
+
+
+.popupstyle .mapboxgl-popup-content {
+      background-color: #EEE6CF;
+      color : #303030;
+      opacity : 1;
+   height : 80px;
+     width : 200px;
+      font-family: "Arial", Times, serif;
+      border-radius : 30px;
+ }
+
+.popupstyle2 .mapboxgl-popup-content {
+      background-color: #E5BEED;
+      color : white;
+      opacity : 1;
+   height : 80px;
+     width : 200px;
+      font-family: "Arial", Times, serif;
+      border-radius : 30px;
+ }
+
+.menu {
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            color : white;
+            opacity : 0.8;
+            position:absolute;
+            width: 250px;
+            bottom: 0;
+            right: 50px;
+            padding: 10px;
+        }
+
+.menu .menu_overlay {
+            background-color: #262626;
+            box-shadow:0 1px 2px rgba(0, 0, 0, 0.10);
+            border-radius: 20px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+.menu_overlay fieldset {
+            border: 2px;
+            border-color : white;
+            padding: 1;
+            margin: 0 0 10px;
+        }
+
+.menu_overlay .categoryLabel {
+            display: block;
+            font-weight: bold;
+            margin: 0 0 5px;
+        }
+
+#ongletsgeo {position: absolute;
+             top: 20px;
+             left: 100px;
+             z-index: 1;
+             width:485px;
+/*               background-color: white;  */
+ 
+}
+
+.bandeau {
+            background-color: #333; /* Couleur de fond */          position : relative;
+            color: #fff;
+             opacity : 0.8;/* Couleur du texte */
+            padding: 5px; /* Espacement intérieur */
+            text-align: center; /* Alignement du texte */          z-index: 2;
+            height: 70px;
+        }
