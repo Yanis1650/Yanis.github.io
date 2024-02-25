@@ -1,0 +1,13 @@
+/* Réinitialisation des marges et des paddings pour le corps du document */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour la carte */
+#map {
+    position: absolute; /* Position absolue pour occuper toute la fenêtre */
+    top: 0; /* Aligné en haut de la fenêtre */
+    bottom: 0; /* Aligné en bas de la fenêtre */
+    width: 100%; /* Largeur de la carte à 100% de la fenêtre */
+}
