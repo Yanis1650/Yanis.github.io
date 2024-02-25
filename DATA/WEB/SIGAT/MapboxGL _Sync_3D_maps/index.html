@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Carte en 3D MapboxGL 2</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+#bandeau {
+width:100%;
+height:70px;
+background-color:#ffffff;}
+
+
+#titre1 {
+ position:absolute;
+left : 1%;
+width:24%;
+height:60px;
+background-color:#252830;
+color: white;
+  text-align: center;
+ font-size: 30px;
+   font-family: "Verdana";
+   font-weight: bold;}
+
+#titre2 {
+ position:absolute;
+left : 26%;
+width:24%;
+height:60px;
+background-color:#252830;
+color: white;
+  text-align: center;
+ font-size: 30px;
+   font-family: "Verdana";
+   font-weight: bold;}
+
+#titre3 {
+ position:absolute;
+left : 51%;
+width:24%;
+height:60px;
+background-color:#252830;
+color: white;
+  text-align: center;
+ font-size: 30px;
+   font-family: "Verdana";
+   font-weight: bold;
+   }
+
+#titre4 {
+ position:absolute;
+left : 76%;
+width:23%;
+height:60px;
+right : 0;
+background-color:#252830;color: white;
+  text-align: center;
+ font-size: 30px;
+   font-family: "Verdana";
+   font-weight: bold;}
+
+
+#footer {
+ position:absolute;
+bottom:0;
+width:100%;
+height:70px;
+background-color:#ffffff;
+}
+
+#Footer1 {
+ bottom:0;
+position:absolute;
+left : 1%;
+width:24%;
+height:60px;
+background-color:#252830;
+color: white;
+  text-align: center;
+ font-size: 30px;
+   font-family: "Verdana";
+   font-weight: bold;}
+
+#Footer2 {
+ bottom:0;
+position:absolute;
+left : 26%;
+width:24%;
+height:60px;
+background-color:#252830;
+color: white;
+  text-align: center;
+ font-size: 30px;
+   font-family: "Verdana";
+   font-weight: bold;}
+
+#Footer3 {
+ bottom:0;
+position:absolute;
+left : 51%;
+width:24%;
+height:60px;
+background-color:#252830;
+color: white;
+  text-align: center;
+ font-size: 30px;
+   font-family: "Verdana";
+   font-weight: bold;
+   }
+
+#Footer4 {
+ bottom:0;
+position:absolute;
+left : 76%;
+width:23%;
+height:60px;
+right : 0;
+background-color:#252830;color: white;
+  text-align: center;
+ font-size: 30px;
+   font-family: "Verdana";
+   font-weight: bold;}
+	#map { position: absolute; top: 70px; bottom: 35px;   left : 1%; width: 24%; }
+    #map2 { position: absolute; top: 70px; bottom: 35px; left : 26%; width: 24%; }
+	#map3 { position: absolute; top: 70px; bottom: 35px; left : 51%; width: 24%; }
+	#map4 { position: absolute; top: 70px; bottom: 35px; left : 76%; width: 23%; }
+
+
+</style>
+</head>
+<body>
+
+  <div id="bandeau"> 
+    <div id="titre1"> <span style="vertical-align:middle;">DEM</span></div>
+    <div id="titre2"> <span style="vertical-align:middle;">LIGHT</span></div>
+    <div id="titre3">   <span style="vertical-align:middle;">OUTDOORS</span> </div>
+    <div id="titre4"> <span style="vertical-align:middle;">SATELLITE</span></div>
+
+
+
+  </div>
+
+
+
+<div id="map"></div>
+<div id="map2"></div>
+<div id="map3"></div>
+<div id="map4"></div>
+
+  <div id="footer"> </div>
+
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoibmluYW5vdW4iLCJhIjoiY2pjdHBoZGlzMnV4dDJxcGc5azJkbWRiYSJ9.o4dZRrdHcgVEKCveOXG1YQ';
+
+// CARTE 1 
+
+
+var map = new mapboxgl.Map({
+container: 'map',
+zoom: 12,
+center: [6.896356, 46.350116],
+pitch: 75,
+bearing: 155,
+style: 'mapbox://styles/ninanoun/ckk8kg4zs1g1b17liugcb6l4t'
+});
+
+map.on('load', function () {
+map.addSource('mapbox-dem', {
+'type': 'raster-dem',
+'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+'tileSize': 512,
+'maxzoom': 14
+});
+// add the DEM source as a terrain layer with exaggerated height
+map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.3});
+
+// add a sky layer that will show when the map is highly pitched
+map.addLayer({
+'id': 'sky',
+'type': 'sky',
+'paint': {
+'sky-type': 'atmosphere',
+'sky-atmosphere-sun': [0.0, 0.0],
+'sky-atmosphere-sun-intensity': 15
+}
+});
+
+});
+
+
+
+
+// CARTE 2
+
+var map2 = new mapboxgl.Map({
+container: 'map2',
+zoom: 12,
+center: [6.896356, 46.350116],
+pitch: 75,
+bearing: 155,
+style: 'mapbox://styles/mapbox/light-v9'
+});
+
+map2.on('load', function () {
+map2.addSource('mapbox-dem', {
+'type': 'raster-dem',
+'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+'tileSize': 512,
+'maxzoom': 14
+});
+// add the DEM source as a terrain layer with exaggerated height
+map2.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.3 });
+
+// add a sky layer that will show when the map is highly pitched
+map2.addLayer({
+'id': 'sky',
+'type': 'sky',
+'paint': {
+'sky-type': 'atmosphere',
+'sky-atmosphere-sun': [0.0, 0.0],
+'sky-atmosphere-sun-intensity': 15
+}
+});
+});
+
+
+// CARTE 3
+
+var map3 = new mapboxgl.Map({
+container: 'map3',
+zoom: 12,
+center: [6.896356, 46.350116],
+pitch: 75,
+bearing: 155,
+style: 'mapbox://styles/mapbox/outdoors-v9'
+});
+
+map3.on('load', function () {
+map3.addSource('mapbox-dem', {
+'type': 'raster-dem',
+'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+'tileSize': 512,
+'maxzoom': 14
+});
+// add the DEM source as a terrain layer with exaggerated height
+map3.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.3 });
+
+// add a sky layer that will show when the map is highly pitched
+map3.addLayer({
+'id': 'sky',
+'type': 'sky',
+'paint': {
+'sky-type': 'atmosphere',
+'sky-atmosphere-sun': [0.0, 0.0],
+'sky-atmosphere-sun-intensity': 15
+}
+});
+});
+
+
+// CARTE 4 
+
+
+var map4 = new mapboxgl.Map({
+container: 'map4',
+zoom: 12,
+center: [6.896356, 46.350116],
+pitch: 75,
+bearing: 155,
+style: 'mapbox://styles/mapbox/satellite-v9'
+});
+
+map4.on('load', function () {
+map4.addSource('mapbox-dem', {
+'type': 'raster-dem',
+'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+'tileSize': 512,
+'maxzoom': 14
+});
+// add the DEM source as a terrain layer with exaggerated height
+map4.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.3});
+
+// add a sky layer that will show when the map is highly pitched
+map4.addLayer({
+'id': 'sky',
+'type': 'sky',
+'paint': {
+'sky-type': 'atmosphere',
+'sky-atmosphere-sun': [0.0, 0.0],
+'sky-atmosphere-sun-intensity': 15
+}
+});
+
+});
+
+
+  // coordination between the four maps
+
+  var disable = false;
+  map.on("move", function() {
+    if (!disable) {
+      var center = map.getCenter();
+      var zoom = map.getZoom();
+      var pitch = map.getPitch();
+      var bearing = map.getBearing();
+
+      disable = true;
+      map2.setCenter(center);
+      map2.setZoom(zoom);
+      map2.setPitch(pitch);
+      map2.setBearing(bearing);
+	   map3.setCenter(center);
+      map3.setZoom(zoom);
+      map3.setPitch(pitch);
+      map3.setBearing(bearing);
+	   map4.setCenter(center);
+      map4.setZoom(zoom);
+      map4.setPitch(pitch);
+      map4.setBearing(bearing);
+      disable = false;
+    }
+  })
+
+  map2.on("move", function() {
+    if (!disable) {
+      var center = map2.getCenter();
+      var zoom = map2.getZoom();
+      var pitch = map2.getPitch();
+      var bearing = map2.getBearing();
+
+      disable = true;
+      map.setCenter(center);
+      map.setZoom(zoom);
+      map.setPitch(pitch);
+      map.setBearing(bearing);
+	  map3.setCenter(center);
+      map3.setZoom(zoom);
+      map3.setPitch(pitch);
+      map3.setBearing(bearing);
+	  map4.setCenter(center);
+      map4.setZoom(zoom);
+      map4.setPitch(pitch);
+      map4.setBearing(bearing);
+      disable = false;
+    }
+  })
+
+   map3.on("move", function() {
+    if (!disable) {
+      var center = map3.getCenter();
+      var zoom = map3.getZoom();
+      var pitch = map3.getPitch();
+      var bearing = map3.getBearing();
+
+      disable = true;
+      map2.setCenter(center);
+      map2.setZoom(zoom);
+      map2.setPitch(pitch);
+      map2.setBearing(bearing);
+	  map.setCenter(center);
+      map.setZoom(zoom);
+      map.setPitch(pitch);
+      map.setBearing(bearing);
+	  map4.setCenter(center);
+      map4.setZoom(zoom);
+      map4.setPitch(pitch);
+      map4.setBearing(bearing);
+      disable = false;
+    }
+  })
+
+  map4.on("move", function() {
+    if (!disable) {
+      var center = map4.getCenter();
+      var zoom = map4.getZoom();
+      var pitch = map4.getPitch();
+      var bearing = map4.getBearing();
+
+      disable = true;
+      map.setCenter(center);
+      map.setZoom(zoom);
+      map.setPitch(pitch);
+      map.setBearing(bearing);
+	  map2.setCenter(center);
+      map2.setZoom(zoom);
+      map2.setPitch(pitch);
+      map2.setBearing(bearing);
+	  map3.setCenter(center);
+      map3.setZoom(zoom);
+      map3.setPitch(pitch);
+      map3.setBearing(bearing);
+      disable = false;
+    }
+  })
+
+
+</script>
+
+</body>
+</html>

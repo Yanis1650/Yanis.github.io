@@ -1,57 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Métadonnées -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de la page -->
     <title>Portfolio</title>
+    <!-- Lien vers la feuille de style -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
+    <!-- En-tête -->
     <header>
-        
-        <div class="landing-page">
+        <!-- Section de la page de destination -->
+        <div class="landing-page" style="background-image: url('DATA/FOND.jpg');">
+            <!-- Titre principal -->
             <h1>Bienvenue sur mon Portfolio</h1>
-            <H2> Yanis LEPESANT </H2>           
-            <H4>lepesantya@gmail.com</H4>
+            <!-- Sous-titre -->
+            <h2>Yanis LEPESANT</h2>           
+            <!-- Adresse e-mail -->
+            <h4>lepesantya@gmail.com</h4>
+            <!-- Description -->
             <p>Parcourez vers le bas pour explorer !</p>
+            <!-- Lien vers LinkedIn -->
             <a href="https://www.linkedin.com/in/yanis-lepesant" target="_blank">
-                <img src="DATA/linkedin (1).png" alt="LinkedIn" width="50" height="50">
+                <img src="DATA/linkedin (2).png" alt="LinkedIn" width="50" height="50">
             </a>
-            
+            <!-- Flèche de défilement -->
             <div class="scroll-down-arrow">
                 <img src="DATA/down-arrow.png" alt="Scroll Down Arrow">
+            </div>
         </div>
     </header>
+    
+    <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#" class="tab-link active" data-tab="web">Web</a></li>
-            <li><a href="#" class="tab-link" data-tab="Carte_fixe">Cartes fixe</a></li>
-            <li><a href="#" class="tab-link" data-tab="design">Design</a></li>
+            <!-- Liens de navigation -->
+            <li><a href="#" class="tab-link active" data-tab="Webmapping">Webmapping</a></li>
+            <li><a href="#" class="tab-link" data-tab="Cartographie">Cartographie</a></li>
+            <li><a href="#" class="tab-link" data-tab="Code">Code</a></li>
+            <li><a href="#" class="tab-link" data-tab="Design">Design</a></li>
+            <li><a href="#" class="tab-link" data-tab="Atelier">Atelier</a></li>
+            <li><a href="#" class="tab-link" data-tab="Urbanisme">Urbanisme</a></li>
+            <li><a href="#" class="tab-link" data-tab="Télédétection">Télédétection</a></li>
             <li><a href="#" class="tab-link" data-tab="CV">CV</a></li>
-            <li><a href="#" class="tab-link" data-tab="projet">Projets</a></li>
         </ul>
-
     </nav>
-    <section id="web" class="tab-content active">
-        
-        <div class="project">
+    
+    <!-- Sections de contenu -->
+    <section id="Webmapping" class="tab-content active" style="background-image: url('DATA/FOND2.jpg');">
+        <!-- Contenu pour la section Webmapping -->
+        <div class="project" >
+            <iframe src="DATA/WEB/extrusion/index.html" width="100%" height="400" frameborder="0"></iframe>
+            <p>Carte interactive de répresentation de données venant de l'open data de Rennes Métropole
+            </p>
+        </div>
+        <div class="project" >
             <iframe src="DATA/WEB/java_mardi/java_mardi/dist/index.html" width="100%" height="400" frameborder="0"></iframe>
             <p>Carte interactive de répresentation de données venant de l'open data de Rennes Métropole
             </p>
         </div>
-        <div class="project">
-            <iframe src="DATA/WEB/d-chetterie-maplibre-gl-js-16-02/d-chetterie-maplibre-gl-js-16-02/dist/index.html" width="100%" height="400" frameborder="0"></iframe>
+        <div class="project" style="background-color: #FFFFFF; border-radius: 5px;">
+            <iframe src="DATA/WEB/d-chetterie-maplibre-gl-js-16-02/d-chetterie-maplibre-gl-js-16-02/dist/index.html" width="100%" height="400" frameborder="0" background-color = "#FFFFFF" margin-bottom="20px"></iframe>
             <p>Visualisation des déchetterie et de leurs attributs de Rennes métropole à partir d'un fichier Geojson </p>
         </div>
         <!-- Ajoutez autant de projets que nécessaire -->
     </section>
-    <div></div>
-    <section id="Carte_fixe" class="tab-content">
-        
+    
+    <section id="Cartographie" class="tab-content" style="background-image: url('DATA/FOND2.jpg');">
+        <!-- Contenu pour la section Cartographie -->
         <div class="project">
             <img src="DATA/CARTES/bivariee.jpg" alt="Description de l'image 3">
-            <p> Les Cartes Bivariées, un outil puissant pour croiser deux variables et révéler des tendances sous-jacentes. Cette fois, le sujet abordé est plutôt sombre, mais c'est une facette essentielle de la cartographie : mettre en lumière des réalités parfois difficiles, mais nécessaires à connaître.
+            <p>Les Cartes Bivariées, un outil puissant pour croiser deux variables et révéler des tendances sous-jacentes. Cette fois, le sujet abordé est plutôt sombre, mais c'est une facette essentielle de la cartographie : mettre en lumière des réalités parfois difficiles, mais nécessaires à connaître.
             </p>
         </div>
         <div class="project">
@@ -69,54 +91,89 @@
         </div>
         <!-- Ajoutez autant de projets que nécessaire -->
     </section>
-    <section id="design" class="tab-content">
-      
 
+    <section id="Code" class="tab-content" style="background-image: url('DATA/FOND2.jpg');">
+        <!-- Contenu pour la section Code -->
         <div class="project">
-            <img src="DATA/CARTES/poster.jpg" alt="Description de l'image 6">
-            <p>Poster </p>
-        </div>
-        <div class="project">
-            <img src="DATA/CARTES/RolandGarros.jpg" alt="Description de l'image 6">
-            <p> Datavisualisation réalisée en collaboration avec antoine Soumet sur le thème de RolandGarros 
-            </p>
-        </div>
-        <!-- Ajoutez autant de projets que nécessaire -->
-    </section>
-    <section id="CV" class="tab-content">
-        <h2>Documents</h2>
-        <div class="project">
-            <img src="DATA/COMPETENCES/CV.jpg" alt="Description de l'image 6">
-            <p> CV 2023 </p>
-        </div>
-
-        <!-- Ajoutez autant de liens vers des documents PDF que nécessaire -->
-    </section>
-
-    <section id="projet" class="tab-content">
-        <div class="project">
-            <iframe src="DATA/PROJETS/2. Restitution complète REB.pdf" width="100%" height="600px"></iframe>
-            <p>Réseau entreprendre Bretagne : réalisation d'un diagnostic territorial 
-                de l'activité du Réseau Entreprendre Bretagne depuis les 20 dernières années et analyse d'opportunités de développement du réseau.</p>
-        </div>
-        <div class="project">
-            <iframe src="DATA/PROJETS/Tutoriel Excel - Flourish.pdf" width="100%" height="600px"></iframe>
-            <p> Le projet était accompagné d'un tutoriel détaillé sur la création d'un tableau 
-                croisé dynamique sur Excel, avec la possibilité de le transférer facilement sur FLOURISH. 
-                Ce guide fournissait des instructions pas à pas sur la préparation des données, 
-                leur visualisation et la mise en page, assurant ainsi une compréhension complète du processus.</p>
-        </div>
-        <div class="project">
+            <h1>Projet de cours M2</h1>
             <iframe src="DATA/PROJETS/Script1 (1).html" width="100%" height="600px"></iframe>
-            <p> SCRIPT 1</p>
+            <p>SCRIPT 1</p>
         </div>
         <div class="project">
             <iframe src="DATA/PROJETS/Script4 (1).html" width="100%" height="600px"></iframe>
-            <p> SCRIPT 1</p>
+            <p>SCRIPT 1</p>
         </div>
     </section>
+
+    <section id="Design" class="tab-content" style="background-image: url('DATA/FOND2.jpg');">
+        <!-- Contenu pour la section Design -->
+        <div class="project">
+            <img src="DATA/CARTES/poster.jpg" alt="Description de l'image 6">
+            <p>Poster</p>
+        </div>
+        <div class="project">
+            <img src="DATA/CARTES/RolandGarros.jpg" alt="Description de l'image 6">
+            <p>Datavisualisation réalisée en collaboration avec Antoine Soumet sur le thème de RolandGarros</p>
+        </div>
+        <!-- Ajoutez autant de projets que nécessaire -->
+    </section>
+
+    <section id="Atelier" class="tab-content" style="background-image: url('DATA/FOND2.jpg');">
+        <!-- Contenu pour la section Atelier -->
+        <div class="project">
+            <h1>ATELIER PROFESSIONNEL M1</h1>
+            <iframe src="DATA/PROJETS/2. Restitution complète REB.pdf" width="100%" height="600px"></iframe>
+            <p>Réseau entreprendre Bretagne : réalisation d'un diagnostic territorial de l'activité du Réseau Entreprendre Bretagne depuis les 20 dernières années et analyse d'opportunités de développement du réseau.</p>
+        </div>
+        <div class="project">
+            <iframe src="DATA/PROJETS/Tutoriel Excel - Flourish.pdf" width="100%" height="600px"></iframe>
+            <p>Le projet était accompagné d'un tutoriel détaillé sur la création d'un tableau croisé dynamique sur Excel, avec la possibilité de le transférer facilement sur FLOURISH. Ce guide fournissait des instructions pas à pas sur la préparation des données, leur visualisation et la mise en page, assurant ainsi une compréhension complète du processus.</p>
+        </div>
+        <!-- Ajoutez autant de projets que nécessaire -->
+    </section>
     
+    <section id="Urbanisme" class="tab-content" style="background-image: url('DATA/FOND2.jpg');">
+        <!-- Contenu pour la section Urbanisme -->
+        <div class="project">
+            <h1>Diagnostic territorial sur la commune de Guichen (35)</h1>
+            <iframe src="DATA/Licence/Diagnostic-territorial-Guichen.pdf" width="100%" height="600px"></iframe>
+            <p></p>
+        </div>
+        <div class="project">
+            <h1>Diagnostic territorial sur la commune de Guichen (35)</h1>
+            <iframe src="DATA/Licence/Projet-urbain-Guichen-Le-Tas-Faou-de-Guichen.pdf" width="100%" height="600px"></iframe>
+            <p></p>
+        </div>
+        <div class="project">
+            <h1>Document de planification en Urbanisme : étude de cas</h1>
+            <iframe src="DATA/PROJETS/Documents_Planification_Dossier (1).pdf" width="100%" height="600px"></iframe>
+            <p></p>
+        </div>
+    </section>    
+    
+    <section id="Télédétection" class="tab-content" style="background-image: url('DATA/FOND2.jpg');">
+        <!-- Contenu pour la section Télédétection -->
+        <div class="project">
+            <h1>Projet télédétection Master 1</h1>
+            <iframe src="DATA/PROJETS/Dossier_Salt Lake City.pdf" width="100%" height="600px"></iframe>
+        </div>
+        <div class="project">
+            <h1>Projet télédétection Licence 3</h1>
+            <iframe src="DATA/PROJETS/Télédétection_Lepesant Yanis (3).pdf" width="100%" height="600px"></iframe>
+        </div>
+    </section>
+
+    <section id="CV" class="tab-content" style="background-image: url('DATA/FOND2.jpg');">
+        <!-- Contenu pour la section CV -->
+        <h2>Documents</h2>
+        <div class="project">
+            <img src="DATA/COMPETENCES/CV.jpg" alt="Description de l'image 6">
+            <p>CV 2023</p>
+        </div>
+        <!-- Ajoutez autant de liens vers des documents PDF que nécessaire -->
+    </section>
+    
+    <!-- Script JavaScript -->
     <script src="main.js"></script>
 </body>
 </html>
-
