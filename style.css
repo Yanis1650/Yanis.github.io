@@ -128,7 +128,7 @@ nav ul li a:hover:before,ul li a:hover:after{
 }
 
 .project img {
-    max-width: 70%; /* Largeur maximale de l'image */
+    max-width: 55%; /* Largeur maximale de l'image */
     height: auto; /* Hauteur automatique pour conserver les proportions */
     display: block; /* Afficher l'image comme un bloc */
     background-color: transparent; /* Couleur de fond transparente */
