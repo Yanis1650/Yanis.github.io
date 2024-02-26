@@ -38,13 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
         });
-        
-        // Ajouter un écouteur d'événements pour le survol de la souris sur chaque lien d'onglet
-        // link.addEventListener("mouseenter", function() {
-        //     this.style.backgroundColor = "green"; // Couleur verte au survol
-        // });
 
-        // Ajouter un écouteur d'événements pour la sortie du survol de la souris sur chaque lien d'onglet
+        // Ajouter un écouteur d'événements pour le survol de la souris sur chaque lien d'onglet
         link.addEventListener("mouseleave", function() {
             this.style.backgroundColor = ""; // Retour à la couleur par défaut
         });
@@ -67,5 +62,27 @@ document.addEventListener("DOMContentLoaded", function() {
     // Ajouter un écouteur d'événements pour le clic sur la flèche de défilement vers le bas
     scrollDownArrow.addEventListener("click", function() {
         window.scrollBy(0, window.innerHeight); // Faire défiler la fenêtre vers le bas d'une hauteur de fenêtre
+    });
+
+    // Ajouter un écouteur d'événements pour le chargement initial de la page
+    let lastScrollTop = 0; // Variable pour garder la dernière position de défilement
+
+    window.addEventListener('scroll', () => {
+        const currentScrollTop = window.scrollY;
+        const projectElems = document.querySelectorAll('.project img, .project .text-content');
+
+        projectElems.forEach(elem => {
+            if (currentScrollTop > lastScrollTop) {
+                // En défilant vers le bas, ajoutez la classe 'zoom-in'
+                elem.classList.add('zoom-in');
+                elem.classList.remove('zoom-out');
+            } else {
+                // En défilant vers le haut, ajoutez la classe 'zoom-out'
+                elem.classList.add('zoom-out');
+                elem.classList.remove('zoom-in');
+            }
+        });
+
+        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Mise à jour de la dernière position de défilement
     });
 });

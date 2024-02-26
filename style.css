@@ -2,8 +2,8 @@
 /* *,
 *::before,
 *::after {
-    box-sizing: border-box; /* Boîte de modélisation pour inclure les bordures et les marges dans la taille */
- /* Réinitialise les rembourrages */
+box-sizing: border-box; /* Boîte de modélisation pour inclure les bordures et les marges dans la taille */
+/* Réinitialise les rembourrages */
 
 /* Styles généraux */
 body, html {
@@ -65,7 +65,7 @@ body, html {
     color: #666; /* Couleur du texte du paragraphe, à ajuster selon les besoins */
 }
 
-}
+
 
 /* Styles pour l'en-tête */
 header {
@@ -151,27 +151,48 @@ nav ul li a:hover:before,ul li a:hover:after{
 }
 
 /* Styles pour les projets */
-.project {
+/* .project { */
     /* margin-bottom: 20px; /* Marge en bas de chaque projet */
     /* background-color: #fff; Couleur de fond */ 
     /* border-radius: 5px; Bordure arrondie */
     /* overflow: hidden; Masquer le contenu qui dépasse */
+/* } */
+
+/* Styles pour les projets */
+/* Style spécifique pour les sections avec cartes et textes */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Séparer l'image et le texte */
+    align-items: flex-start; /* Aligner les éléments au début de la boîte flex */
+    margin-bottom: 20px; /* Espace en dessous de chaque section */
+    /* Retirer les ombres et fonds pour les images */
 }
 
 .project img {
-    max-width: 55%; /* Largeur maximale de l'image */
-    height: auto; /* Hauteur automatique pour conserver les proportions */
-    display: block; /* Afficher l'image comme un bloc */
-    background-color: transparent; /* Couleur de fond transparente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre de la boîte */
-    margin: auto; /* Centrer l'image horizontalement */
-    border-radius: 10px; /* Bordure arrondie */
+    width: 48%; /* Réduire la taille de l'image */
+    height: auto; /* Garder les proportions de l'image */
+    border: none; /* Pas de bordure pour l'image */
+    box-shadow: none; /* Pas d'ombre pour l'image */
 }
 
-.project p {
-    font-size: 16px; /* Taille de la police */
-    margin: 10px; /* Marge autour du paragraphe */
-    text-align: center; /* Centrer le texte */
+.project .text-content {
+    width: 48%; /* Ajuster la largeur du texte pour qu'il corresponde à celle de l'image */
+    padding: 0; /* Pas de padding interne nécessaire */
+    background: none; /* Pas de fond pour le texte */
+    font-weight: bold; /* Texte en gras */
+    color: grey; /* Texte en couleur grise */
+}
+
+
+.project img.zoom-in, .project .text-content.zoom-in {
+    transform: scale(1.05); /* Zoom léger */
+    transition: transform 0.3s ease-in-out;
+}
+
+.project img.zoom-out, .project .text-content.zoom-out {
+    transform: scale(0.95); /* Dézoom léger */
+    transition: transform 0.3s ease-in-out;
 }
 
 .project iframe {
