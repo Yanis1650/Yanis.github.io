@@ -34,7 +34,38 @@ body, html {
 @media screen and (min-width: 1025px) {
     /* Ajoutez vos styles pour les ordinateurs de bureau ici */
 }
+/* Styles pour la section "À propos de moi" */
 
+/* Conteneur pour la section "À propos de moi" */
+#about-me {
+    min-height: 100vh; /* Hauteur minimale de la section égale à la hauteur de la fenêtre visible pour assurer qu'elle s'affiche entièrement */
+    background: #fff; /* Couleur de fond de la section, à ajuster selon les besoins */
+    padding: 50px 0; /* Espacement interne en haut et en bas de la section */
+    box-sizing: border-box; /* La taille totale de la section inclut les rembourrages et les bordures */
+}
+
+/* Conteneur interne pour aligner le contenu au centre */
+#about-me .container {
+    max-width: 1200px; /* Largeur maximale du contenu pour assurer une bonne lisibilité */
+    margin: 0 auto; /* Centrer le contenu horizontalement */
+    padding: 0 15px; /* Espacement interne pour le contenu, à ajuster selon les besoins */
+}
+
+/* Style du titre principal */
+#about-me h1 {
+    font-size: 2.5em; /* Taille de police du titre */
+    color: #333; /* Couleur du texte du titre, à ajuster selon les besoins */
+    margin-bottom: 20px; /* Espacement en bas du titre */
+}
+
+/* Style du paragraphe */
+#about-me p {
+    font-size: 1.2em; /* Taille de police du paragraphe */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    color: #666; /* Couleur du texte du paragraphe, à ajuster selon les besoins */
+}
+
+}
 
 /* Styles pour l'en-tête */
 header {
