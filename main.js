@@ -85,4 +85,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
         lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Mise à jour de la dernière position de défilement
     });
+
+    // Récupérez les éléments pour la lightbox
+    var modal = document.getElementById("myModal");
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    // Quand l'utilisateur clique sur l'image, ouvrez la lightbox
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+
+    // Récupérez l'élément pour fermer la lightbox
+    var span = document.getElementsByClassName("close")[0];
+
+    // Quand l'utilisateur clique sur (x), fermez la lightbox
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
 });
