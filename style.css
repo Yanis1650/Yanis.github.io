@@ -4,7 +4,6 @@
 *::after {
     box-sizing: border-box; /* Boîte de modélisation pour inclure les bordures et les marges dans la taille */
 
-
 /* Styles généraux */
 body, html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Police de caractères par défaut */
@@ -57,6 +56,20 @@ body, html {
     color: #666; /* Couleur du texte du paragraphe, à ajuster selon les besoins */
 }
 
+#about-image,
+#about-text,
+.icons .icon {
+    /* Styles de transition */
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0;
+}
+
+/* Class to be added when the element is in the viewport */
+.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
 /* Styles pour l'en-tête */
 header {
     text-align: center; /* Centrer le texte */
@@ -75,60 +88,53 @@ nav {
 nav ul {
     list-style-type: none; /* Supprime les puces de liste */
     padding: 0; /* Réinitialise les rembourrages */
-    margin: 0.5; /* Marge autour de la liste */
+    margin: 0; /* Correction de la marge */
     text-align: center; /* Centrer le texte */
     font-weight: bold; /* Style de police en gras */
     font-size: larger; /* Taille de la police */
     flex-wrap: wrap;
     display: flex;
-    position: relative; /* Positionnement relatif pour permettre
+    position: relative; /* Positionnement relatif pour permettre */
 }
 
 nav ul li {
     list-style: none; /* Afficher les éléments de la liste en ligne */
 }
 
+/* Style des liens de navigation */
 nav ul li a {
-    text-decoration: none;
-    color: #3d3d3d;
-    display: block;
-    padding: 10px 15px;
-    position: relative;
+    text-decoration: none; /* Supprime la décoration par défaut du texte */
+    color: #3d3d3d; /* Couleur du texte */
+    display: block; /* Fait en sorte que les liens soient des éléments de bloc */
+    padding: 10px 15px; /* Espacement intérieur des liens */
+    position: relative; /* Position relative pour positionner les pseudo-éléments */
 }
 
-nav ul li a:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #1cd8d2;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: all 0.5s;
-}
-
+/* Styles pour les pseudo-éléments des liens de navigation */
+nav ul li a:before,
 nav ul li a:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #1cd8d2;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: all 0.5s;
+    content: ''; /* Ajoute un contenu vide */
+    position: absolute; /* Position absolue pour positionner les éléments par rapport à leur conteneur */
+    top: 100%; /* Positionne les éléments juste en dessous du bas de leur conteneur */
+    left: 0; /* Place les éléments complètement à gauche */
+    width: 100%; /* Largeur des éléments égale à 100% de la largeur de leur conteneur */
+    height: 2px; /* Hauteur des éléments */
+    background-color: #1cd8d2; /* Couleur de fond */
+    transform: scaleX(0); /* Les éléments sont initialement invisibles */
+    transition: transform 0.5s; /* Animation de transition pour la transformation */
 }
 
-nav ul li a:hover {
-    color: #1cd8d2;
+/* Réglages pour le pseudo-élément ::after */
+nav ul li a:after {
+    left: auto; /* Réajuste la position horizontale du pseudo-élément ::after */
+    right: 0; /* Place le pseudo-élément complètement à droite */
+    transform-origin: right; /* Le point d'origine de la transformation est à droite */
 }
 
+/* Animation lors du survol des liens */
 nav ul li a:hover:before,
-ul li a:hover:after {
-    transform: scaleX(1);
+nav ul li a:hover:after {
+    transform: scaleX(1); /* Les pseudo-éléments sont étirés horizontalement lors du survol */
 }
 
 /* Styles pour le contenu des onglets */
@@ -151,14 +157,13 @@ ul li a:hover:after {
 }
 
 .project img {
-    width: 30%; /* Réduire la taille de l'image */
+    max-width: 30%; /* Réduire la taille de l'image */
     height: auto; /* Garder les proportions de l'image */
     border-radius: 15px; /* Pas de bordure pour l'image */
-    box-shadow: none; /* Pas d'ombre pour l'image */
 }
 
 .project .text-content {
-    width: 48%; /* Ajuster la largeur du texte pour qu'il corresponde à celle de l'image */
+    max-width: 48%; /* Ajuster la largeur du texte pour qu'il corresponde à celle de l'image */
     padding: 0; /* Pas de padding interne nécessaire */
     text-align: center;
     font-weight: bold; /* Texte en gras */
@@ -182,7 +187,7 @@ ul li a:hover:after {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre de la boîte */
 }
 
-.project logo {
+.project .logo {
     max-width: 20%; /* Largeur maximale du logo */
 }
 
@@ -275,3 +280,4 @@ ul li a:hover:after {
     text-decoration: none;
     cursor: pointer;
 }
+

@@ -106,4 +106,21 @@ document.addEventListener("DOMContentLoaded", function() {
     span.onclick = function() {
         modal.style.display = "none";
     }
+
+    // Nouveau bout de code pour gérer le défilement et afficher certains éléments
+    window.addEventListener('scroll', function() {
+        var image = document.getElementById('about-image');
+        var text = document.getElementById('about-text');
+        var icons = document.querySelectorAll('.icons .icon');
+        var imagePosition = image.getBoundingClientRect().top;
+        var screenPosition = window.innerHeight / 1.3;
+
+        if (imagePosition < screenPosition) {
+            image.classList.add('visible');
+            text.classList.add('visible');
+            icons.forEach(function(icon) {
+                icon.classList.add('visible');
+            });
+        }
+    });
 });
