@@ -316,9 +316,7 @@ p {
 }
 
 
-.icon-section {
-    /* Styles for the section */
-}
+
 
 .icon-row {
     display: flex;
@@ -433,19 +431,22 @@ border-radius: 15px;
 
 /* You might need additional media queries for other screen sizes */
 @media (max-width: 480px) {
-    /* Further adjustments for even smaller screens */
     .intro-image img {
-        max-width: 200px;
+      max-width: 200px; /* Even smaller for very small screens */
     }
-
-    /* Adjust margins and font sizes as necessary */
-    .intro h1 {
-        font-size: 1.2rem;
+    .text h1 {
+      font-size: 1.2rem; /* Smaller font size for the title */
     }
-    
-    .intro p {
-        font-size: 0.9rem;
+    .text p {
+      font-size: 1rem; /* Smaller font size for the paragraph */
     }
-
-    /* Adjust layout for any other elements that need it */
+    .download-cv-button {
+      font-size: 0.8rem; /* Smaller font size for the button */
+      padding: 10px; /* Adjust padding for the button */
+      bottom: -40px; /* Adjust the position of the button */
+    }
+    .text a img {
+    width: 40px; /* Smaller size for LinkedIn icon */
+    height: 40px;
+    }
 }
