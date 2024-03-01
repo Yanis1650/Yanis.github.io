@@ -1,70 +1,96 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <!-- Métadonnées -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Titre de la page -->
-    <title>Portfolio</title>
-    <!-- Lien vers la feuille de style -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Portfolio</title>
+<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+<header>
+    <nav id="navbar" class="navbar">
+        <div class="logo">Geomatic</div>
+        <ul class="nav-links">
+            <li><a href="#" class="tab-link active" data-tab="Webmapping">Webmapping</a></li>
+            <li><a href="#" class="tab-link  " data-tab="Cartographie">Cartographie</a></li>
+            <li><a href="#" class="tab-link  " data-tab="Code">Code</a></li>
+            <li><a href="#" class="tab-link " data-tab="Design">Design</a></li>
+            <li><a href="#" class="tab-link  " data-tab="Atelier">Atelier</a></li>
+            <li><a href="#" class="tab-link " data-tab="Urbanisme">Urbanisme</a></li>
+            <li><a href="#" class="tab-link " data-tab="Télédétection">Télédétection</a></li>
+            <!-- <li><a href="#" class="tab-link " data-tab="CV">CV</a></li> -->
+        </ul>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    </nav>
+</header>
+<main id="home">
     
-    <!-- En-tête -->
-    <header>
-        <!-- Section de la page de destination -->
-        <div class="landing-page" style="background-image: url('DATA/FOND.jpg');">
-            <!-- Titre principal -->
-            <h1>Bienvenue sur mon Portfolio</h1>
-            <!-- Sous-titre -->
-            <h2>Yanis LEPESANT</h2>           
-            <!-- Adresse e-mail -->
-            <h4>lepesantya@gmail.com</h4>
-            <!-- Description -->
-            <p>Parcourez vers le bas pour explorer !</p>
-            <!-- Lien vers LinkedIn -->
+    <section class="intro">
+     <div class="background-shape">
+        <div class="content">
+            <div class="text">
+            <h1>Bienvenue sur mon site !</h1>
+            <p>Etudiant en Géomatique, je suis en dernière année d'étude du master SIGAT à Rennes</p>
             <a href="https://www.linkedin.com/in/yanis-lepesant" target="_blank">
-                <img src="DATA/linkedin (2).png" alt="LinkedIn" width="50" height="50">
+                <img src="DATA/linkedin (3).png" alt="LinkedIn" width="50" height="50">
             </a>
-            <!-- Flèche de défilement -->
-            <div class="scroll-down-arrow">
-                <img src="DATA/down-arrow.png" alt="Scroll Down Arrow">
-            </div>
         </div>
-    </header>
-
-    <!-- Section "À propos de moi" -->
-    <section id="about-section">
-        <!-- Image de profil -->
-        <img src="DATA/1400.jpg" id="about-image" alt="Your photo">
-        <!-- Texte de description -->
-        <div id="about-text">Étudiant en géomatique au sein du master SIGAT à Rennes</div>
-        <!-- Icônes -->
-        <div class="icons">
-            <!-- Icônes individuelles -->
-            <img src="DATA/python.png" alt="Icon description" class="icon">
-            <!-- Ajoutez d'autres icônes ici si nécessaire -->
+    </div>     
+        <div class="intro-image">
+            <img src="./DATA/DSCF0440.jpg" alt="John Carter">
+        </div>
+        <a href="/DATA/COMPETENCES/CV.jpg" class="download-cv-button" download>Download CV</a>
+    </div>
+    </section>
+    
+    <section class="icon-section">
+        <div class="icon-row">
+            <!-- Python Icon -->
+            <div class="icon">
+                <img src="./DATA/python.png" alt="Icone Python"/>
+                <span class="icon-text">Python</span>
+            </div>
+            <!-- HTML5 Icon -->
+            <div class="icon">
+                <img src="./DATA/html-5.png" alt="Icone HTML5"/>
+                <span class="icon-text">HTML5</span>
+            </div>
+            <!-- JavaScript Icon -->
+            <div class="icon">
+                <img src="./DATA/script-java.png" alt="Icone JavaScript"/>
+                <span class="icon-text">JavaScript</span>
+            </div>
+            <!-- CSS3 Icon -->
+            <div class="icon">
+                <img src="./DATA/css-3.png" alt="Icone CSS3"/>
+                <span class="icon-text">CSS3</span>
+            </div>
+            <!-- ArcGIS Icon -->
+            <div class="icon">
+                <img src="./DATA/ArcGIS_logo.png" alt="Icone ArcGIS"/>
+                <span class="icon-text">ArcGIS</span>
+            </div>
+            <!-- QGIS Icon -->
+            <div class="icon">
+                <img src="./DATA/qgis-icon128.png" alt="Icone QGIS"/>
+                <span class="icon-text">QGIS</span>
+            </div>
+            <!-- RStudio Icon -->
+            <div class="icon">
+                <img src="./DATA/RStudio_Logo.png" alt="Icone RStudio"/>
+                <span class="icon-text">RStudio</span>
+            </div>
+            <!-- Add as many icons as necessary -->
         </div>
     </section>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <!-- Liens de navigation -->
-            <li><a href="#" class="tab-link active" data-tab="Webmapping">Webmapping</a></li>
-            <li><a href="#" class="tab-link" data-tab="Cartographie">Cartographie</a></li>
-            <li><a href="#" class="tab-link" data-tab="Code">Code</a></li>
-            <li><a href="#" class="tab-link" data-tab="Design">Design</a></li>
-            <li><a href="#" class="tab-link" data-tab="Atelier">Atelier</a></li>
-            <li><a href="#" class="tab-link" data-tab="Urbanisme">Urbanisme</a></li>
-            <li><a href="#" class="tab-link" data-tab="Télédétection">Télédétection</a></li>
-            <li><a href="#" class="tab-link" data-tab="CV">CV</a></li>
-        </ul>
-    </nav>
+    
+    
 
-    <!-- Sections de contenu -->
+</main>
+
+
     <!-- Contenu pour la section Webmapping -->
-    <section id="Webmapping" class="tab-content active" style="background-image: url('DATA/FOND2.jpg');">
+    <section id="Webmapping" class="tab-content active" >
         <div class="project" >
             <iframe src="DATA/WEB/extrusion/index.html" width="100%" height="400" frameborder="0"></iframe>
             <p>Carte interactive de représentation de données venant de l'open data de Rennes Métropole</p>
@@ -79,51 +105,150 @@
         </div>
         <!-- Ajoutez autant de projets que nécessaire -->
     </section>
-    
-    <!-- Contenu pour la section Cartographie -->
-    <section id="Cartographie" class="tab-content" style="background-image: url('DATA/FOND2.jpg');">
-        <div class="project">
-            <img src="DATA/CARTES/bivariee.jpg" alt="Description de l'image 3">
+    <section id="Cartographie" class="tab-content">
+        <div class="content-container">
             <div class="text-content">
                 <h3>Carte Bivariée des Taux de Mortalité et Ménages Seuls en France</h3>
                 <p>Cette visualisation en carte bivariée présente le lien entre les taux de mortalité et la proportion de ménages seuls dans les différentes zones de France. La moyenne nationale est de 10% pour le taux de mortalité et de 37% pour les ménages seuls. La carte révèle 230 bassins de vie avec un taux de mortalité et une proportion de ménages seuls élevés. Les données ont été traitées avec le logiciel QGIS et la mise en page a été réalisée avec Adobe Illustrator.</p>
             </div>
+            <div class="image-container">
+                <img src="DATA/CARTES/bivariee.jpg" alt="Carte Bivariée des Taux de Mortalité et Ménages Seuls en France">
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="text-content">
+                <h3>Données de flux de transports au format GTFS </h3>
+                <p>Exploration et cartographie d'un jeu de données GTFS sur la métropole de Grenoble. Le traitement a été réalisé sur Rstudio, la symbologie sur QGIS et la mise en page sur Adobe Illustrator.</p>
+            </div>
+            <div class="image-container">
+                <img src="DATA/CARTES/GTFS.jpg" alt="Description de l'image 3">
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="text-content">
+                <h3>Cartogramme de l'accidentologie des départements</h3>
+                <p>Exploration et cartographie de l'observatoire des accidents routiers. Le traitement a été réalisé sur Rstudio, la symbologie sur QGIS et la mise en page sur Adobe Illustrator.</p>
+            </div>
+            <div class="image-container">
+                <img src="DATA/CARTES/ACCIDENTS_ANA.png" alt="Description de l'image 3">
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="text-content">
+                <h3>Les départements les plus attractifs</h3>
+                <p>Exploration et cartographie des mouvements des ménages en France. Le traitement a été réalisé sur Rstudio, la symbologie sur QGIS et la mise en page sur Adobe Illustrator.</p>
+            </div>
+            <div class="image-container">
+                <img src="DATA/CARTES/expat_menages.jpg" alt="Description de l'image 3">
+            </div>
         </div>
         <!-- Ajoutez autant de projets que nécessaire -->
     </section>
-
+    
     <!-- Contenu pour la section Code -->
-    <section id="Code" class="tab-content" style="background-image: url('DATA/hunter-harritt-Ype9sdOPdYc-unsplash.jpg');">
+    <section id="Code" class="tab-content" >
         <div class="project">
             <h1>Projet de cours M2</h1>
             <iframe src="DATA/PROJETS/Script1 (1).html" width="100%" height="600px"></iframe>
-            <p>SCRIPT 1</p>
+            <p>Explorations et traitements des données DVF ( Données Valeurs Foncières ) au vue d'une exploitation cartographique </p>
+        </div>
+        <div class="project">
+            <h1>Projet de cours M2</h1>
+            <iframe src="./DATA/PROJETS/Script4 (1).html" width="100%" height="600px"></iframe>
+            <p> Visualisation cartographique des données DVF </p>
         </div>
         <!-- Ajoutez autant de projets que nécessaire -->
     </section>
 
     <!-- Contenu pour la section Design -->
-    <section id="Design" class="tab-content" style="background-image: url('DATA/FOND2.jpg');">
-        <div class="project">
+    <section id="Design" class="tab-content" >
+        <div class="project my-new-class">
+            <H1>Projet de vulgarisation d'un thème en Géomatique </H1>
             <img src="DATA/CARTES/poster.jpg" alt="Description de l'image 6">
+            <p>Poster</p>
+        </div>
+        <div class="project my-new-class">
+            <H1>Projet de datavisualisation </H1>
+            <img src="DATA/CARTES/RolandGarros.jpg" alt="Description de l'image 7">
             <p>Poster</p>
         </div>
         <!-- Ajoutez autant de projets que nécessaire -->
     </section>
 
     <!-- Contenu pour la section Atelier -->
-    <section id="Atelier" class="tab-content" style="background-image: url('DATA/FOND2.jpg');">
+    <section id="Atelier" class="tab-content">
+        <div class="project">
+            <h1>ATELIER PROFESSIONNEL M2 </h1>
+            <iframe src="DATA/PROJETS/RAPPORT_FINAL.pdf" width="100%" height="600px"></iframe>
+            <p>Réseau Entreprendre Bretagne : réalisation d'un diagnostic territorial de l'activité du Réseau Entreprendre Bretagne depuis les 20 dernières années et analyse d'opportunités de développement du réseau.</p>
+        </div>
         <div class="project">
             <h1>ATELIER PROFESSIONNEL M1</h1>
             <iframe src="DATA/PROJETS/2. Restitution complète REB.pdf" width="100%" height="600px"></iframe>
             <p>Réseau Entreprendre Bretagne : réalisation d'un diagnostic territorial de l'activité du Réseau Entreprendre Bretagne depuis les 20 dernières années et analyse d'opportunités de développement du réseau.</p>
         </div>
+        <div class="project">
+            <h1>ATELIER PROFESSIONNEL M1</h1>
+            <iframe src="DATA/PROJETS/Tutoriel Excel - Flourish.pdf" width="100%" height="600px"></iframe>
+            <p>Réseau Entreprendre Bretagne : réalisation d'un diagnostic territorial de l'activité du Réseau Entreprendre Bretagne depuis les 20 dernières années et analyse d'opportunités de développement du réseau.</p>
+        </div>
         <!-- Ajoutez autant de projets que nécessaire -->
     </section>
-    
-    <!-- Ajoutez autant de sections que nécessaire pour les autres catégories -->
+    <section id="Urbanisme" class="tab-content">
+        <div class="project">
+            <H1>Etude d'un Plan Local d'Urbanisme en M1</H1>
+            <iframe src="DATA/PROJETS/Documents_Planification_Dossier.pdf" width="100%" height="600px"></iframe>
+            <p>Réalisation d'une étude sur l'ilmpact et les contentieux autour d'un PLU en corse <br>
+                En collaboration avec Saïd Khatir, Antoine Soumet, Jonas Constant. 
+            </p>
+        </div>
+        <div class="project">
+            <H1>Diagnostic territorial de la commune de Guichen licence 3</H1>
+            <iframe src="DATA/PROJETS/Diagnostic-territorial-Guichen.pdf" width="100%" height="600px"></iframe>
+            <p>Réalisation d'une étude sur l'ilmpact et les contentieux autour d'un PLU en corse <br>
+                En collaboration avec Langlamet Élise, Le Dez Aurégane et Morel Quentin.
+            </p>
+        </div>
+        <div class="project">
+            <H1>Etude pour l'implatation d'un projet Urbain</H1>
+            <iframe src="DATA/PROJETS/Projet-urbain-Guichen-Le-Tas-Faou-de-Guichen.pdf" width="100%" height="600px"></iframe>
+            <p>En lien avec le diagnoctic territorial, nous avons voulu réaliser une étude pour un projet urbain à Guichen <br>
+                En collaboration avec Langlamet Élise, Le Dez Aurégane et Morel Quentin.
+            </p>
+        </div>
 
-    <!-- Script JavaScript -->
-    <script src="main.js"></script>
+    </section>
+    <section id="Télédétection" class="tab-content">
+            <div class="project">
+                <h1>Projet de Télédétection M1</h1>
+                <iframe src="./DATA/PROJETS/matricielle.pdf" width="100%" height="600px"></iframe>
+                <p>Réalisation d'une étude sur l'implantation d'une autouroute près de Grenoble
+                    En collaboration avec Angeline Pinilo
+                </p>
+            </div>
+        <div class="project">
+            <h1>Projet de Télédétection M1</h1>
+            <iframe src="./DATA/PROJETS/Dossier_Salt Lake City.pdf" width="100%" height="600px"></iframe>
+            <p>Réalisation d'un diagnoctic sur la région de Salt Lake City aux états-unis
+                En collaboration avec Jules Delalande et Jonas Constant
+            </p>
+        </div>
+        <div class="project">
+            <H1>Porjet de Télédétection Licence 3</H1>
+            <iframe src="./DATA/PROJETS/Télédétection_Lepesant Yanis (3).pdf"  width="100%" height="600px"></iframe>
+            <p>Réalisation d'une étude sur les feux de forêts au Canada</p>
+        </div>
+    
+    </section>
+    <!-- <section id="CV" class="tab-content">
+        <div id="project">
+            <H1> CV </H1>
+            <img src="./DATA/COMPETENCES/CV.jpg">
+
+        </div>
+    </section> -->
+    <!-- Ajoutez autant de sections que nécessaire pour les autres catégories -->
+    
+<script src="./script.js"></script>
 </body>
 </html>
