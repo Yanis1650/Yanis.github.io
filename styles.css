@@ -1,0 +1,402 @@
+/* Body Styles */
+body {
+    
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1f24; /* This sets the background color for the entire page */
+    color: #fff; /* Sets the default text color to white */
+}
+/* Hide all tab-content sections by default */
+.tab-content {
+    display: flex;
+}
+
+/* Only display the active tab-content section */
+.tab-content.active {
+    display: block;
+    background-size: cover; /* If you want background images to cover the area */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex; /* Utilise Flexbox pour disposer les éléments en ligne */
+    justify-content: space-between; /* Répartit l'espace disponible entre les éléments */
+    align-items: center; /* Centre les éléments verticalement */
+    background-color: #1b1f24; /* Arrière-plan sombre pour la barre de navigation */
+    color: white; /* Couleur du texte */
+    padding: 1rem; /* Ajoute de l'espace intérieur */
+    font-weight: bold;
+
+}
+
+.navbar .logo {
+    font-weight: bold; /* Police en gras */
+    font-size: 1.5rem; /* Taille de police */
+    cursor: pointer; /* Indique que le logo est cliquable */
+    color: #fff; /* Couleur du texte */
+    transition: text-shadow 0.3s ease, color 0.3s ease; /* Transition en douceur pour l'effet de survol */
+}
+
+.navbar .logo:hover {
+    text-shadow: 4px 4px 8px rgba(30, 144, 255, 0.8); /* Augmente la taille de l'ombre pour accentuer l'effet d'extrusion */
+    color: #1e90ff; /* Change la couleur du texte en bleu au survol */
+}
+
+/* Liens de Navigation Styles */
+.nav-links {
+    list-style: none; /* Supprime les puces des listes */
+    display: flex; /* Utilise Flexbox pour disposer les éléments en ligne */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espaces intérieurs par défaut */
+}
+
+.nav-links li {
+    padding: 0 1rem; /* Ajoute un espacement horizontal entre les éléments de la liste */
+}
+
+.nav-links a {
+    text-decoration: none; /* Supprime la soulignement des liens */
+    color: white; /* Couleur du texte */
+    transition: color 0.3s ease; /* Transition en douceur pour l'effet de survol */
+}
+
+.nav-links a:hover {
+    color: #1e90ff; /* Change la couleur au survol pour indiquer l'interactivité */
+    text-shadow: 4px 4px 8px rgba(30, 144, 255, 0.8); /* Augmente la taille de l'ombre pour accentuer l'effet d'extrusion */
+    color: #1e90ff;
+}
+
+/* Bouton Hamburger Styles (pour les écrans de petite taille) */
+.hamburger {
+    display: none; /* Masque le bouton hamburger par défaut */
+    font-size: 2rem; /* Taille de police */
+    background: none; /* Fond transparent */
+    border: none; /* Supprime la bordure */
+    color: white; /* Couleur du texte */
+}
+
+/* Media Query pour les écrans de petite taille */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Masque les liens de navigation */
+        flex-direction: column; /* Disposition des éléments en colonne */
+        width: 100%; /* Largeur maximale */
+        text-align: center; /* Centre le texte */
+    }
+
+    .nav-links li {
+        padding: 0.5rem 0; /* Ajoute un espacement vertical entre les éléments de la liste */
+    }
+
+    .hamburger {
+        display: block; /* Affiche le bouton hamburger */
+    }
+}
+
+/* Section d'introduction Styles */
+
+.intro {
+    font-size: 3rem;
+    position: relative;
+    text-align: center;
+    padding: 2rem 1rem; /* Reduced vertical padding */
+    background-color: #1b1f24;
+    color: white;
+    min-height: 50vh; /* Reduced minimum height */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    }
+/* Style pour le contenu textuel de l'intro */
+.content {
+    font-size: 10rem; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Le texte doit être au-dessus de l'image et de la forme en arrière-plan */
+    color: #fff; /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
+    max-width: 100%;
+}
+
+/* Conteneur des Statistiques Styles */
+.stats {
+    display: flex; /* Utilise Flexbox pour disposer les éléments en ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+    margin: 2rem 0; /* Ajoute une marge */
+}
+
+.stats div {
+    margin: 1rem; /* Ajoute une marge autour des éléments */
+    text-align: center; /* Centre le texte */
+}
+
+
+
+/* Texte d'introduction Styles */
+.text {
+    font-size: 10rem; 
+    max-width: 600px; /* Largeur maximale */
+    padding: 0 50px; /* Ajoute de l'espace intérieur sur les côtés */
+}
+
+.top-line {
+    height: 4px; /* Hauteur de la ligne */
+    width: 50px; /* Largeur de la ligne */
+    background-color: #1e90ff; /* Couleur de mise en évidence pour la ligne supérieure */
+    margin-bottom: 20px; /* Marge en bas */
+}
+
+h1 {
+    font-size: 2.5rem; /* Taille de police plus grande pour le titre principal */
+    margin-bottom: 1rem; /* Marge en bas du titre */
+    text-shadow: #fff;
+}
+.text h1{
+    font-size: 4rem;
+
+}
+p {
+    font-size: 1rem; /* Taille de police */
+    margin-bottom: 2rem; /* Augmente la marge en bas pour l'espacement */
+}
+
+.stats-container {
+    display: flex; /* Utilise Flexbox pour disposer les éléments en ligne */
+    justify-content: space-between; /* Répartit l'espace disponible entre les éléments */
+    max-width: 400px; /* Largeur maximale du conteneur de statistiques */
+    margin: auto; /* Centre le conteneur de statistiques */
+}
+
+.stat {
+    text-align: center; /* Centre le contenu de chaque statistique */
+}
+
+.number {
+    font-size: 2.5rem; /* Taille de police plus grande pour les chiffres */
+    font-weight: bold; /* Police en gras */
+    display: block; /* Affiche en tant que bloc */
+    margin-bottom: 0.5rem; /* Marge en bas du nombre */
+}
+
+.descriptor {
+    font-size: 1rem; /* Taille de police pour le descripteur */
+}
+
+/* Image d'introduction Styles */
+.intro-image {
+    position: relative;
+    z-index: 2; /* L'image doit être au-dessus de la forme en arrière-plan mais sous le texte */
+    width: auto; /* Ajustez la largeur selon le design */
+    height: auto; /* Ajustez la hauteur selon le design */
+    border-radius: 50%; /* Si vous voulez une image ronde */
+    width: 400px; /* Taille de l'image légèrement plus grande */
+    height: 400px; /* Hauteur de l'image */
+    border-radius: 50%; /* Bords arrondis pour un effet de cercle */
+    overflow: hidden; /* Cache tout contenu dépassant de l'image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ajoute une ombre subtile pour la profondeur */
+}
+
+.intro-image img {
+    width: 100%; /* Largeur de l'image à 100% */
+    height: 100%;
+    height: auto; /* Hauteur automatique */
+    display: block; /* Affiche en tant que bloc pour supprimer tout espace supplémentaire en dessous de l'image */
+}
+
+
+/* Style pour les élements  */
+/* Style des images dans les projets des onglets */
+.tab-content .project img {
+    max-width: 100%; /* Assurez-vous que les images ne dépassent pas la largeur de leur conteneur */
+    height: auto; /* Ajustez automatiquement la hauteur pour conserver les proportions de l'image */
+    border-radius: 5px; /* Ajoutez des coins arrondis aux images si nécessaire */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoutez une légère ombre pour un effet de profondeur */
+    margin-bottom: 10px; /* Ajoutez une marge en bas pour l'espacement entre les images */
+}
+
+
+
+.project img {
+    max-width: 60%;
+    height: auto; /* Ajustez automatiquement la hauteur pour conserver les proportions de l'image */
+    border-radius: 5px; /* Ajoutez des coins arrondis aux images si nécessaire */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoutez une légère ombre pour un effet de profondeur */
+    margin-bottom: 10px; /* Ajoutez une marge en bas pour l'espacement entre les images */
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjusted margin */
+    gap: 30px; /* Adjusted gap */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.icon-row img {
+    width: 50px; /* Taille des icônes */
+    height: auto; /* Conserver les proportions */
+    margin: 0 15px; /* Ajuster l'espacement autour des icônes */
+    height: 30px; /* Reduced height of logos */
+}
+.icon-row.visible {
+    opacity: 1;
+    visibility: visible; /* Rendre visible lorsque la classe 'visible' est ajoutée */
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center; /* Centre les logos horizontalement */
+    align-items: center; /* Centre les logos verticalement */
+    margin-top: 100px; /* Ajustez selon l'espace souhaité après la photo */
+    gap: 50px; /* Ajustez selon l'espacement souhaité entre les logos */
+    opacity: 1; /* Assurez-vous que les logos sont visibles */
+    pointer-events: auto; /* Permet l'interaction avec les logos */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ajustez l'espacement entre les icônes */
+}
+  
+.icon-row img {
+    width: auto; /* ou une largeur fixe si nécessaire */
+    ; /* Ajustez la hauteur souhaitée pour les logos */
+    width: 50px; /* Ajustez selon la taille désirée */
+    height: auto;
+}
+
+/* Ajout d'une forme en arrière-plan de la photo */
+.background-shape {
+    position: absolute;
+    top: 50%; /* Centrer verticalement par rapport à la section */
+    left: 50%; /* Centrer horizontalement par rapport à la section */
+    transform: translate(-50%, -50%); /* Ajustement pour un centrage parfait */
+    width: 80%; /* ou une taille spécifique selon votre conception */
+    height: 80%; /* ou une taille spécifique selon votre conception */
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur semi-transparente */
+    border-radius: 50%; /* Forme circulaire */
+    z-index: 1; /* Assurez-vous que la forme est en arrière-plan */
+}
+
+
+.content-container {
+    display: flex; /* Active Flexbox */
+    align-items: center; /* Alignement vertical des enfants */
+    justify-content: space-between; /* Espace entre le texte et l'image */
+    gap: 20px; /* Espace entre le texte et l'image si nécessaire */
+}
+
+.text-content {
+    flex: 1; /* Permet au texte de remplir l'espace disponible */
+    padding-right: 20px; /* Espace entre le texte et l'image */
+    text-align: center; /* Centrer le texte à l'intérieur de chaque conteneur */
+    margin: auto; /* Centrer le conteneur lui-même horizontalement */
+    max-width: 600px; /* Définir une largeur maximale pour le contenu pour éviter qu'il ne devienne trop large sur les grands écrans */
+}
+
+.image-container {
+    flex: 1; /* Permet à l'image de remplir l'espace disponible */
+}
+
+.image-container img {
+    max-width: 100%; /* Assure que l'image ne dépasse pas le conteneur */
+    height: auto; /* Maintient l'aspect ratio de l'image */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(209, 208, 208, 0.1); 
+   
+}
+
+.project iframe {
+    border-radius: 15px;
+}
+
+
+.icon-section {
+    /* Styles for the section */
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center; /* Adjust as needed for your layout */
+    gap: 10px; /* Space between icons */
+}
+
+.icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.icon img {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout de l'ombre portée */
+}
+
+.icon:hover img {
+    transform: scale(1.1); /* Slightly enlarge the icon */
+}
+
+.icon-text {
+    display: none;
+    position: absolute;
+    bottom: -40px; /* Adjust the position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* Ensure the text does not wrap */
+    color: #fff; /* Text color */
+    font-weight: bold;
+    
+    /* Add more styles as needed */
+}
+
+.icon:hover .icon-text {
+    display: block;
+}
+
+#Design {
+    display: block; /* Ensures that #Design is a block-level container */
+}
+
+.project {
+    display: block; /* Makes each project a block-level element */
+    margin-bottom: 20px; /* Adds space between the projects */
+    /* Other styles... */
+}
+
+.my-new-class {
+height: auto;
+border-radius: 15px;
+
+}
+
+.download-cv-button {
+    padding: 5px 8px; /* Size of the button */
+    color: white; /* Text color */
+    background: linear-gradient(to right, #434343 0%, black 100%); /* Gradient effect */
+    border: 2px solid #4f4f4f; /* Border color and width */
+    border-radius: 25px; /* Rounded corners */
+    font-weight: bold; /* Font weight */
+    text-transform: uppercase; /* Uppercase text */
+    text-decoration: none; /* Remove underline from links */
+    box-shadow: 0 4px 8px rgba(173, 170, 170, 0.2); /* Shadow effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    display: inline-block; /* Allows the use of padding and centering */
+    cursor: pointer; /* Cursor effect when hovering over the button */
+    font-size: small;
+
+}
+
+.download-cv-button:hover {
+    background: linear-gradient(to left, #434343 0%, black 100%); /* Gradient direction changes on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
