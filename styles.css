@@ -66,33 +66,30 @@ body {
     text-shadow: 4px 4px 8px rgba(30, 144, 255, 0.8); /* Augmente la taille de l'ombre pour accentuer l'effet d'extrusion */
     color: #1e90ff;
 }
-
-/* Bouton Hamburger Styles (pour les écrans de petite taille) */
 .hamburger {
-    display: none; /* Masque le bouton hamburger par défaut */
-    font-size: 2rem; /* Taille de police */
-    background: none; /* Fond transparent */
-    border: none; /* Supprime la bordure */
-    color: white; /* Couleur du texte */
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
 }
-
-/* Media Query pour les écrans de petite taille */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Masque les liens de navigation */
-        flex-direction: column; /* Disposition des éléments en colonne */
-        width: 100%; /* Largeur maximale */
-        text-align: center; /* Centre le texte */
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-links li {
-        padding: 0.5rem 0; /* Ajoute un espacement vertical entre les éléments de la liste */
+        padding: 0.5rem 0;
     }
 
     .hamburger {
-        display: block; /* Affiche le bouton hamburger */
+        display: block;
     }
 }
+
 
 /* Section d'introduction Styles */
 
@@ -189,13 +186,13 @@ p {
 /* Image d'introduction Styles */
 .intro-image {
     position: relative;
-    z-index: 2; /* L'image doit être au-dessus de la forme en arrière-plan mais sous le texte */
+    z-index: 1; /* L'image doit être au-dessus de la forme en arrière-plan mais sous le texte */
     width: auto; /* Ajustez la largeur selon le design */
     height: auto; /* Ajustez la hauteur selon le design */
     border-radius: 50%; /* Si vous voulez une image ronde */
     width: 400px; /* Taille de l'image légèrement plus grande */
     height: 400px; /* Hauteur de l'image */
-    border-radius: 50%; /* Bords arrondis pour un effet de cercle */
+    /* border-radius: 50%; Bords arrondis pour un effet de cercle */
     overflow: hidden; /* Cache tout contenu dépassant de l'image */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ajoute une ombre subtile pour la profondeur */
 }
@@ -204,7 +201,9 @@ p {
     width: 100%; /* Largeur de l'image à 100% */
     height: 100%;
     height: auto; /* Hauteur automatique */
-    display: block; /* Affiche en tant que bloc pour supprimer tout espace supplémentaire en dessous de l'image */
+    /* border-radius: 50%; */
+    object-fit: cover;
+    /* display: block; Affiche en tant que bloc pour supprimer tout espace supplémentaire en dessous de l'image */
 }
 
 
@@ -263,7 +262,7 @@ p {
     justify-content: center;
     gap: 20px; /* Ajustez l'espacement entre les icônes */
 }
-  
+
 .icon-row img {
     width: auto; /* ou une largeur fixe si nécessaire */
     ; /* Ajustez la hauteur souhaitée pour les logos */
@@ -399,4 +398,54 @@ border-radius: 15px;
 .download-cv-button:hover {
     background: linear-gradient(to left, #434343 0%, black 100%); /* Gradient direction changes on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust the size of the profile image */
+    .intro-image img {
+        max-width: 300px;
+    }
+
+    /* Adjust the positioning of the text */
+    .intro h1 {
+        font-size: 1.5rem; /* Smaller font size */
+        margin-top: 20px; /* Add space above the text */
+    }
+
+    .intro p {
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    /* Adjust the layout of any buttons or icons */
+    .intro .download-button {
+        font-size: 0.8rem; /* Smaller font size */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    /* Make sure social icons don't overlap */
+    .social-icons {
+        width: 100%; /* Full width */
+        justify-content: space-around; /* Space out icons */
+    }
+}
+
+/* You might need additional media queries for other screen sizes */
+@media (max-width: 480px) {
+    /* Further adjustments for even smaller screens */
+    .intro-image img {
+        max-width: 200px;
+    }
+
+    /* Adjust margins and font sizes as necessary */
+    .intro h1 {
+        font-size: 1.2rem;
+    }
+    
+    .intro p {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust layout for any other elements that need it */
 }
