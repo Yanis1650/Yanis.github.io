@@ -3,22 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Portfolio</title>
+<title>Portfolio</title>
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <header>
     <nav id="navbar" class="navbar">
         <div class="logo">Geomatic</div>
+        <!-- Hamburger Button for Small Screens -->
+        
         <ul class="nav-links">
             <li><a href="#" class="tab-link active" data-tab="Webmapping">Webmapping</a></li>
-            <li><a href="#" class="tab-link  " data-tab="Cartographie">Cartographie</a></li>
-            <li><a href="#" class="tab-link  " data-tab="Code">Code</a></li>
-            <li><a href="#" class="tab-link " data-tab="Design">Design</a></li>
-            <li><a href="#" class="tab-link  " data-tab="Atelier">Atelier</a></li>
-            <li><a href="#" class="tab-link " data-tab="Urbanisme">Urbanisme</a></li>
-            <li><a href="#" class="tab-link " data-tab="Télédétection">Télédétection</a></li>
-            <!-- <li><a href="#" class="tab-link " data-tab="CV">CV</a></li> -->
+            <li><a href="#" class="tab-link" data-tab="Cartographie">Cartographie</a></li>
+            <li><a href="#" class="tab-link" data-tab="Code">Code</a></li>
+            <li><a href="#" class="tab-link" data-tab="Design">Design</a></li>
+            <li><a href="#" class="tab-link" data-tab="Atelier">Atelier</a></li>
+            <li><a href="#" class="tab-link" data-tab="Urbanisme">Urbanisme</a></li>
+            <li><a href="#" class="tab-link" data-tab="Télédétection">Télédétection</a></li>
+            <!-- <li><a href="#" class="tab-link" data-tab="CV">CV</a></li> -->
         </ul>
         <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
     </nav>
@@ -26,21 +28,21 @@
 <main id="home">
     
     <section class="intro">
-     <div class="background-shape">
-        <div class="content">
-            <div class="text">
-            <h1>Bienvenue sur mon site !</h1>
-            <p>Etudiant en Géomatique, je suis en dernière année d'étude du master SIGAT à Rennes</p>
-            <a href="https://www.linkedin.com/in/yanis-lepesant" target="_blank">
-                <img src="DATA/linkedin (3).png" alt="LinkedIn" width="50" height="50">
-            </a>
+        <div class="background-shape">
+            <div class="content">
+                <div class="text">
+                    <h1>Bienvenue sur mon site !</h1>
+                    <p>Etudiant en Géomatique, je suis en dernière année d'étude du master SIGAT à Rennes</p>
+                    <a href="https://www.linkedin.com/in/yanis-lepesant" target="_blank">
+                        <img src="DATA/linkedin (3).png" alt="LinkedIn" width="50" height="50">
+                    </a>
+                </div>
+            </div> 
+            <div class="intro-image">
+                <img src="./DATA/DSCF0440.jpg" alt="John Carter">
+            </div>
+            <a href="/DATA/COMPETENCES/CV.jpg" class="download-cv-button" download>Download CV</a>
         </div>
-    </div>     
-        <div class="intro-image">
-            <img src="./DATA/DSCF0440.jpg" alt="John Carter">
-        </div>
-        <a href="/DATA/COMPETENCES/CV.jpg" class="download-cv-button" download>Download CV</a>
-    </div>
     </section>
     
     <section class="icon-section">
@@ -84,9 +86,8 @@
         </div>
     </section>
     
-    
-
 </main>
+
 
 
     <!-- Contenu pour la section Webmapping -->
