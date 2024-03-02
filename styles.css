@@ -235,7 +235,15 @@ p {
     gap: 30px; /* Adjusted gap */
     opacity: 1;
     pointer-events: auto;
+    flex-wrap: wrap;
+
 }
+
+.icon {
+    /* Vous pouvez donner une classe .icon à chaque conteneur d'icône pour un meilleur contrôle */
+    margin: 5px; /* Espace autour de chaque icône */
+    flex: 0 1 auto; /* Les icônes peuvent rétrécir et grandir mais gardent leur taille par défaut */
+  }
 
 .icon-row img {
     width: 50px; /* Taille des icônes */
@@ -250,18 +258,6 @@ p {
     pointer-events: auto;
 }
 
-.icon-row {
-    display: flex;
-    justify-content: center; /* Centre les logos horizontalement */
-    align-items: center; /* Centre les logos verticalement */
-    margin-top: 100px; /* Ajustez selon l'espace souhaité après la photo */
-    gap: 50px; /* Ajustez selon l'espacement souhaité entre les logos */
-    opacity: 1; /* Assurez-vous que les logos sont visibles */
-    pointer-events: auto; /* Permet l'interaction avec les logos */
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Ajustez l'espacement entre les icônes */
-}
 
 .icon-row img {
     width: auto; /* ou une largeur fixe si nécessaire */
@@ -308,7 +304,7 @@ p {
     height: auto; /* Maintient l'aspect ratio de l'image */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(209, 208, 208, 0.1); 
-   
+
 }
 
 .project iframe {
@@ -322,6 +318,9 @@ p {
     display: flex;
     justify-content: center; /* Adjust as needed for your layout */
     gap: 10px; /* Space between icons */
+    grid-template-columns: repeat(auto-fit, 
+    minmax(min(11.25rem),1fr));
+    
 }
 
 .icon {
@@ -427,6 +426,16 @@ border-radius: 15px;
         width: 100%; /* Full width */
         justify-content: space-around; /* Space out icons */
     }
+    .icon-row {
+            justify-content: space-around; /* Répartit l'espace plus uniformément lorsque les icônes sont sur plusieurs lignes */
+          }
+    
+    .icon {
+            flex-basis: 100%; /* Chaque icône prendra toute la largeur sur les petits écrans */
+            text-align: center; /* Si vous avez du texte en dessous des icônes, cela le centrera */
+          }
+        
+
 }
 
 /* You might need additional media queries for other screen sizes */
@@ -449,4 +458,13 @@ border-radius: 15px;
     width: 40px; /* Smaller size for LinkedIn icon */
     height: 40px;
     }
+    .icon-row {
+        justify-content: space-around; /* Répartit l'espace plus uniformément lorsque les icônes sont sur plusieurs lignes */
+      }
+      
+      .icon {
+        flex-basis: 100%; /* Chaque icône prendra toute la largeur sur les petits écrans */
+        text-align: center; /* Si vous avez du texte en dessous des icônes, cela le centrera */
+      }
+    
 }
