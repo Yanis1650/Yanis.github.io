@@ -16,9 +16,47 @@
     top: 10px;
     left: 30px;
     width: 180px;
-    background-color: #ffffff;
-    opacity: 0.89;
-    color: #000000;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
     font: 13px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
-    padding: 10;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    border: 1px solid #333; /* Dark border for definition */
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 5px 10px;
+    border-bottom: 1px solid #333; /* Dark border for each item */
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu label {
+    cursor: pointer;
+    display: block;
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.menu label:hover {
+    color: #40e0d0; /* Turquoise color when hovered over */
+}
+
+.menu input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* If you want the category titles to stand out, you can style them separately */
+.menu .categoryLabel {
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between title and checkboxes */
 }

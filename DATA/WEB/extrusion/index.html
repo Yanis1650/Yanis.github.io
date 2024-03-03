@@ -5,59 +5,54 @@
       name="viewport"
       content="initial-scale=1,maximum-scale=1,user-scalable=no"
     />
-    <!-- Combine les liens vers les feuilles de style -->
     <link
       href="https://cdn.maptiler.com/maplibre-gl-js/v1.13.0-rc.4/mapbox-gl.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-
     <title>Votre titre ici</title>
   </head>
 
   <body>
     <div id="map"></div>
     <div class="menu">
-        <hr />
-        <label class="categoryLabel"><b>Données Réferentielles</b></label>
-        <br />
-        <input
-          type="checkbox"
-          id="Batiments"
-          value="Batiments"
-          onchange="switchlayer('Batiments')"
-          checked
-        />
-        <label for="Batiments">Batiments</label>
-        <hr />
-        <label class="categoryLabel"><b>Données TC</b></label>
-        <br />
-        <input
-          type="checkbox"
-          id="Stations"
-          value="Stations"
-          onchange="switchlayer('Stations')"
-          checked
-        />
-        <label for="Stations">Stations de métro</label>
-        <br />
-        <input
-          type="checkbox"
-          id="Lignes"
-          value="Lignes"
-          onchange="switchlayer('Lignes')"
-          checked
-        />
-        <label for="Lignes">Lignes de métro</label>
-        <hr />
+        <!-- Utilisation de listes pour une meilleure sémantique -->
+        <ul>
+            <li class="categoryLabel"><b>Données Réferentielles</b></li>
+            <li>
+              <input
+                type="checkbox"
+                id="Batiments"
+                value="Batiments"
+                onchange="switchlayer('Batiments')"
+                checked
+              />
+              <label for="Batiments">Batiments</label>
+            </li>
+            <li class="categoryLabel"><b>Données TC</b></li>
+            <li>
+              <input
+                type="checkbox"
+                id="Stations"
+                value="Stations"
+                onchange="switchlayer('Stations')"
+                checked
+              />
+              <label for="Stations">Stations de métro</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="Lignes"
+                value="Lignes"
+                onchange="switchlayer('Lignes')"
+                checked
+              />
+              <label for="Lignes">Lignes de métro</label>
+            </li>
+        </ul>
       </div>
-    <script>
-      // Appel et configuration de la carte
-    </script>
-    <!-- Déplace les scripts JavaScript à la fin du body pour améliorer les performances de chargement -->
     <script src="https://cdn.maptiler.com/maplibre-gl-js/v1.13.0-rc.4/mapbox-gl.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
-
-
