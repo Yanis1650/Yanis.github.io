@@ -181,8 +181,10 @@ h3{
 }
 p {
     font-size: 1rem; /* Taille de police */
+    margin-left: 1rem;
     margin-bottom: 2rem; /* Augmente la marge en bas pour l'espacement */
 }
+
 
 .stats-container {
     display: flex; /* Utilise Flexbox pour disposer les éléments en ligne */
@@ -261,8 +263,8 @@ p {
     opacity: 1;
     pointer-events: auto;
     flex-wrap: wrap;
-    margin: 50px;
-    filter: drop-shadow(10px 7px 10px bleu);
+    margin: 75px;
+    /* filter: drop-shadow(10px 7px 10px bleu); */
 
 }
 
@@ -270,7 +272,7 @@ p {
     /* Vous pouvez donner une classe .icon à chaque conteneur d'icône pour un meilleur contrôle */
     margin: 5px; /* Espace autour de chaque icône */
     flex: 0 1 auto; /* Les icônes peuvent rétrécir et grandir mais gardent leur taille par défaut */
-    filter: drop-shadow(10px 7px 10px bleu);
+    /* filter: drop-shadow(10px 7px 10px bleu); */
 }
 
 .icon-row img {
@@ -397,6 +399,38 @@ height: auto;
 border-radius: 15px;
 
 }
+.adresse-mail {
+    padding: 10px 20px; /* Size of the button */
+    color: white; /* Text color */
+    background: linear-gradient(to right, #434343 0%, black 100%); /* Gradient effect */
+    border: 2px solid #4f4f4f; /* Border color and width */
+    border-radius: 25px; /* Rounded corners */
+    font-weight: bold; /* Font weight */
+    text-transform: uppercase; /* Uppercase text */
+    text-decoration: none; /* Remove underline from links */
+    box-shadow: 0 4px 8px rgba(173, 170, 170, 0.2); /* Shadow effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    display: inline-block; /* Allows the use of padding and centering */
+    cursor: pointer; /* Cursor effect when hovering over the button */
+    font-size: small;
+    font-size: 0.8rem;
+    margin-top: 50px;
+
+}
+
+.adresse-mail:hover {
+    background: linear-gradient(to left, #434343 0%, black 100%); /* Gradient direction changes on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+.logo-LinkedIn{
+
+    position: relative; /* Use relative positioning */
+    top: -40px; /* Move up by 20px; adjust the value as needed */
+    
+}
+
+
 
 .download-cv-button {
     padding: 10px 20px; /* Size of the button */
@@ -413,7 +447,7 @@ border-radius: 15px;
     cursor: pointer; /* Cursor effect when hovering over the button */
     font-size: small;
     font-size: 0.8rem;
-    margin-top: 50px;
+    margin-top: 60px;
 
 }
 
