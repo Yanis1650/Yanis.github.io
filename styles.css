@@ -6,6 +6,7 @@ body {
     padding: 0;
     background-color: #1b1f24; /* This sets the background color for the entire page */
     color: #fff; /* Sets the default text color to white */
+    font-weight: bold;
 }
 /* Hide all tab-content sections by default */
 .tab-content {
@@ -153,6 +154,7 @@ body {
     font-size: 10rem; 
     max-width: 600px; /* Largeur maximale */
     padding: 0 50px; /* Ajoute de l'espace intérieur sur les côtés */
+    font-weight: bold;
 }
 
 .top-line {
@@ -166,10 +168,16 @@ h1 {
     font-size: 2.5rem; /* Taille de police plus grande pour le titre principal */
     margin-bottom: 1rem; /* Marge en bas du titre */
     text-shadow: #fff;
+    text-shadow: -4px 3px 0 #3a50d9,
+                 -14px 7px 0 #0a0e27;
 }
 .text h1{
     font-size: 4rem;
+}
 
+
+h3{
+    font-size: 2rem;
 }
 p {
     font-size: 1rem; /* Taille de police */
@@ -230,6 +238,7 @@ p {
     border-radius: 5px; /* Ajoutez des coins arrondis aux images si nécessaire */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoutez une légère ombre pour un effet de profondeur */
     margin-bottom: 10px; /* Ajoutez une marge en bas pour l'espacement entre les images */
+    filter: drop-shadow(2px 2px 2px blue);
 }
 
 
@@ -240,6 +249,7 @@ p {
     border-radius: 5px; /* Ajoutez des coins arrondis aux images si nécessaire */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoutez une légère ombre pour un effet de profondeur */
     margin-bottom: 10px; /* Ajoutez une marge en bas pour l'espacement entre les images */
+    filter: drop-shadow(2px 2px 2px blue);
 }
 
 .icon-row {
@@ -252,6 +262,7 @@ p {
     pointer-events: auto;
     flex-wrap: wrap;
     margin: 50px;
+    filter: drop-shadow(10px 7px 10px bleu);
 
 }
 
@@ -259,6 +270,7 @@ p {
     /* Vous pouvez donner une classe .icon à chaque conteneur d'icône pour un meilleur contrôle */
     margin: 5px; /* Espace autour de chaque icône */
     flex: 0 1 auto; /* Les icônes peuvent rétrécir et grandir mais gardent leur taille par défaut */
+    filter: drop-shadow(10px 7px 10px bleu);
 }
 
 .icon-row img {
@@ -266,6 +278,7 @@ p {
     height: auto; /* Conserver les proportions */
     margin: 0 15px; /* Ajuster l'espacement autour des icônes */
     height: 30px; /* Reduced height of logos */
+    /* filter: drop-shadow(2px 2px 2px blue); */
 }
 .icon-row.visible {
     opacity: 1;
@@ -274,13 +287,6 @@ p {
     pointer-events: auto;
 }
 
-
-.icon-row img {
-    width: auto; /* ou une largeur fixe si nécessaire */
-    ; /* Ajustez la hauteur souhaitée pour les logos */
-    width: 50px; /* Ajustez selon la taille désirée */
-    height: auto;
-}
 
 /* Ajout d'une forme en arrière-plan de la photo */
 .background-shape {
@@ -325,6 +331,7 @@ p {
 
 .project iframe {
     border-radius: 15px;
+   
 }
 
 
