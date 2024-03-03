@@ -72,6 +72,13 @@ body {
     background: none;
     border: none;
     color: white;
+    /* Additional styles for the hamburger menu */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+    position: absolute; /* Position the hamburger menu absolutely */
+    top: 20px; /* Adjust the top position */
+    right: 20px; /* Adjust the right position */
+    z-index: 10; /* Ensure it's above other elements */
+
 }
 @media (max-width: 768px) {
     .nav-links {
@@ -91,6 +98,7 @@ body {
 }
 
 
+
 /* Section d'introduction Styles */
 
 .intro {
@@ -105,6 +113,13 @@ body {
     align-items: center;
     justify-content: space-evenly;
     gap: 30px;
+    flex-direction: column;
+
+    }
+.intro .content,
+.intro .intro-image {
+         /* Full width on small screens */
+        text-align: center; /* Center align the text */
     }
 /* Style pour le contenu textuel de l'intro */
 .content {
@@ -236,6 +251,7 @@ p {
     opacity: 1;
     pointer-events: auto;
     flex-wrap: wrap;
+    margin: 50px;
 
 }
 
@@ -243,7 +259,7 @@ p {
     /* Vous pouvez donner une classe .icon à chaque conteneur d'icône pour un meilleur contrôle */
     margin: 5px; /* Espace autour de chaque icône */
     flex: 0 1 auto; /* Les icônes peuvent rétrécir et grandir mais gardent leur taille par défaut */
-  }
+}
 
 .icon-row img {
     width: 50px; /* Taille des icônes */
@@ -376,7 +392,7 @@ border-radius: 15px;
 }
 
 .download-cv-button {
-    padding: 5px 8px; /* Size of the button */
+    padding: 10px 20px; /* Size of the button */
     color: white; /* Text color */
     background: linear-gradient(to right, #434343 0%, black 100%); /* Gradient effect */
     border: 2px solid #4f4f4f; /* Border color and width */
@@ -389,6 +405,8 @@ border-radius: 15px;
     display: inline-block; /* Allows the use of padding and centering */
     cursor: pointer; /* Cursor effect when hovering over the button */
     font-size: small;
+    font-size: 0.8rem;
+    margin-top: 50px;
 
 }
 
@@ -427,12 +445,14 @@ border-radius: 15px;
         justify-content: space-around; /* Space out icons */
     }
     .icon-row {
-            justify-content: space-around; /* Répartit l'espace plus uniformément lorsque les icônes sont sur plusieurs lignes */
+            justify-content: space-around;
+            margin: 100px; /* Répartit l'espace plus uniformément lorsque les icônes sont sur plusieurs lignes */
           }
     
     .icon {
             flex-basis: 100%; /* Chaque icône prendra toute la largeur sur les petits écrans */
-            text-align: center; /* Si vous avez du texte en dessous des icônes, cela le centrera */
+            text-align: center;
+            margin: 50px; /* Si vous avez du texte en dessous des icônes, cela le centrera */
           }
         
 
@@ -459,7 +479,8 @@ border-radius: 15px;
     height: 40px;
     }
     .icon-row {
-        justify-content: space-around; /* Répartit l'espace plus uniformément lorsque les icônes sont sur plusieurs lignes */
+        justify-content: space-around; 
+        margin: 100px;/* Répartit l'espace plus uniformément lorsque les icônes sont sur plusieurs lignes */
       }
       
       .icon {
@@ -467,4 +488,10 @@ border-radius: 15px;
         text-align: center; /* Si vous avez du texte en dessous des icônes, cela le centrera */
       }
     
+}
+
+
+/* Ensure the nav-links are visible when the hamburger menu is active */
+.nav-links.active {
+    display: flex; /* Display the navigation links */
 }
