@@ -173,11 +173,13 @@ h1 {
 }
 .text h1{
     font-size: 4rem;
+    margin-left: 1rem;
 }
 
 
 h3{
     font-size: 2rem;
+    margin-left: 1rem;
 }
 p {
     font-size: 1rem; /* Taille de police */
