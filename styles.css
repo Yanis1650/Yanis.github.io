@@ -115,6 +115,7 @@ body {
     justify-content: space-evenly;
     gap: 30px;
     flex-direction: column;
+    margin-top: 35px;
 
     }
 .intro .content,
@@ -170,6 +171,7 @@ h1 {
     text-shadow: #fff;
     text-shadow: -4px 3px 0 #3a50d9,
                  -14px 7px 0 #0a0e27;
+    margin-left: 1rem;
 }
 .text h1{
     font-size: 4rem;
