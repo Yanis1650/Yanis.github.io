@@ -431,7 +431,7 @@ border-radius: 15px;
 .logo-LinkedIn{
 
     position: relative; /* Use relative positioning */
-    top: -40px; /* Move up by 20px; adjust the value as needed */
+    top: -30px; /* Move up by 20px; adjust the value as needed */
     
 }
 
@@ -452,8 +452,7 @@ border-radius: 15px;
     cursor: pointer; /* Cursor effect when hovering over the button */
     font-size: small;
     font-size: 0.8rem;
-    margin-top: 60px;
-
+    margin-top: 55px;
 }
 
 .download-cv-button:hover {
