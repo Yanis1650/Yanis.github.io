@@ -438,7 +438,7 @@ border-radius: 15px;
 
 
 .download-cv-button {
-    padding: 10px 20px; /* Size of the button */
+    padding: 20px 30px; /* Size of the button */
     color: white; /* Text color */
     background: linear-gradient(to right, #434343 0%, black 100%); /* Gradient effect */
     border: 2px solid #4f4f4f; /* Border color and width */
