@@ -380,6 +380,7 @@ p {
     white-space: nowrap; /* Ensure the text does not wrap */
     color: #fff; /* Text color */
     font-weight: bold;
+    z-index: 1000;
     
     /* Add more styles as needed */
 }
