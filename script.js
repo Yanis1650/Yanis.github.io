@@ -22,7 +22,8 @@ function handleWindowResize() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+// Function to initialize tab handling
+function initializeTabs() {
     const mainContent = document.querySelector('main#home');
     const tabs = document.querySelectorAll('.tab-link');
     const sections = document.querySelectorAll('.tab-content');
@@ -67,7 +68,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Listen for scroll events to trigger animations or transitions
+    // Initially hide all sections and show the main content
+    resetTabsAndMainContent();
+}
+
+// Function to initialize scroll animations
+function initializeScrollAnimations() {
     window.addEventListener('scroll', function() {
         var iconRow = document.querySelector('.icon-row');
         // Trigger the animation when reaching the desired scroll position
@@ -75,13 +81,15 @@ document.addEventListener('DOMContentLoaded', function() {
             iconRow.classList.add('visible');
         }
     });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initializeTabs(); // Initialize tab handling
+    initializeScrollAnimations(); // Initialize scroll animations
 
     // Add the resize event listener
     window.addEventListener('resize', handleWindowResize);
 
     // Initial check in case the page loads on a non-mobile screen
     handleWindowResize();
-
-    // Initially hide all sections and show the main content
-    resetTabsAndMainContent();
 });
