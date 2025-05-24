@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hors ligne - Portfolio Yanis Lepesant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #1a1d29 0%, #2E86AB 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .offline-container {
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .offline-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #64FFDA, #2E86AB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .offline-message {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .offline-features {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .offline-features h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .offline-features ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .offline-features li {
+            padding: 0.5rem 0;
+            opacity: 0.8;
+        }
+        
+        .offline-features li::before {
+            content: "✓ ";
+            color: #64FFDA;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .retry-button {
+            background: linear-gradient(135deg, #64FFDA, #2E86AB);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(100, 255, 218, 0.3);
+        }
+        
+        .retry-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(100, 255, 218, 0.4);
+        }
+        
+        .home-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #64FFDA;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .home-link:hover {
+            opacity: 0.8;
+        }
+        
+        .connection-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            background: rgba(244, 67, 54, 0.9);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .network-indicator.online .connection-status {
+            background: rgba(76, 175, 80, 0.9);
+            animation: none;
+        }
+        
+        @media (max-width: 480px) {
+            .offline-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .offline-title {
+                font-size: 1.5rem;
+            }
+            
+            .offline-icon {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="network-indicator">
+        <div class="connection-status" id="connectionStatus">
+            🔴 Hors ligne
+        </div>
+    </div>
+    
+    <div class="offline-container">
+        <div class="offline-icon">📡</div>
+        <h1 class="offline-title">Mode Hors Ligne</h1>
+        <p class="offline-message">
+            Pas de connexion internet ? Pas de problème ! Cette page est mise en cache 
+            pour que vous puissiez toujours accéder au portfolio.
+        </p>
+        
+        <div class="offline-features">
+            <h3>Disponible hors ligne :</h3>
+            <ul>
+                <li>Page d'accueil complète</li>
+                <li>Section compétences</li>
+                <li>Navigation principale</li>
+                <li>Informations de contact</li>
+            </ul>
+        </div>
+        
+        <button class="retry-button" onclick="retryConnection()">
+            🔄 Réessayer la connexion
+        </button>
+        
+        <br>
+        
+        <a href="/" class="home-link">← Retour au portfolio</a>
+    </div>
+    
+    <script>
+        // Vérifier le statut de connexion
+        function updateConnectionStatus() {
+            const status = navigator.onLine;
+            const indicator = document.getElementById('connectionStatus');
+            const container = document.querySelector('.network-indicator');
+            
+            if (status) {
+                indicator.textContent = '🟢 En ligne';
+                container.classList.add('online');
+                
+                // Rediriger automatiquement vers l'accueil après 2 secondes
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
+            } else {
+                indicator.textContent = '🔴 Hors ligne';
+                container.classList.remove('online');
+            }
+        }
+        
+        // Tentative de reconnexion
+        function retryConnection() {
+            if (navigator.onLine) {
+                window.location.href = '/';
+            } else {
+                // Animation du bouton
+                const button = document.querySelector('.retry-button');
+                button.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1)';
+                }, 150);
+                
+                // Vérification dans 1 seconde
+                setTimeout(updateConnectionStatus, 1000);
+            }
+        }
+        
+        // Écouter les changements de connexion
+        window.addEventListener('online', updateConnectionStatus);
+        window.addEventListener('offline', updateConnectionStatus);
+        
+        // Vérification initiale
+        updateConnectionStatus();
+        
+        // Vérification périodique
+        setInterval(updateConnectionStatus, 5000);
+        
+        // Animation d'entrée
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.offline-container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                container.style.transition = 'all 0.6s ease-out';
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html> 
