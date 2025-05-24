@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://yanis-lepesant.fr/sitemap.xml
+Sitemap: https://yanis1650.github.io/Yanis.github.io/sitemap.xml
 
 # Fichiers à ignorer
 Disallow: /sw.js
