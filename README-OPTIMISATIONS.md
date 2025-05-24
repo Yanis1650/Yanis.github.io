@@ -15,24 +15,7 @@
 
 ---
 
-## 🌐 **1. Configuration Domaine Personnalisé**
-
-### **CNAME créé :**
-```
-yanis-lepesant.fr
-```
-
-### **Configuration DNS requise :**
-```
-Type: CNAME
-Name: @
-Value: yanis1650.github.io
-```
-
-### **Configuration GitHub Pages :**
-1. Aller dans **Settings** → **Pages**
-2. Custom domain: `yanis-lepesant.fr`
-3. ✅ Enforce HTTPS activé
+## 🌐 **1. Hébergement GitHub Pages**### **URL du portfolio :**```https://yanis1650.github.io/Yanis.github.io/```### **Configuration GitHub Pages :**1. Repository : `Yanis.github.io`2. Branch : `main`3. ✅ Enforce HTTPS activé4. Portfolio accessible publiquement
 
 ---
 
@@ -224,30 +207,7 @@ gtag('event', 'timing_complete', {
 
 ## 🛠️ **8. Déploiement et Configuration**
 
-### **Étapes de déploiement :**
-
-1. **Acheter le domaine yanis-lepesant.fr**
-2. **Configurer DNS :**
-   ```
-   CNAME @ yanis1650.github.io
-   ```
-
-3. **Créer compte Google Analytics :**
-   - Remplacer `G-XXXXXXXXXX` par votre ID
-   - Configurer les objectifs/conversions
-
-4. **Pousser les fichiers :**
-   ```bash
-   git add .
-   git commit -m "🚀 Optimisations professionnelles complètes"
-   git push origin main
-   ```
-
-5. **Vérifier fonctionnement :**
-   - ✅ PWA installable
-   - ✅ Service Worker actif
-   - ✅ Analytics tracking
-   - ✅ SEO score >90
+### **Étapes de déploiement :**1. **Repository GitHub Pages actif**   - URL : https://yanis1650.github.io/Yanis.github.io/   - Branch : main   - HTTPS forcé2. **Créer compte Google Analytics :**   - Remplacer `G-XXXXXXXXXX` par votre ID   - Configurer les objectifs/conversions3. **Pousser les fichiers :**   ```bash   git add .   git commit -m "🚀 Portfolio modernisé - version GitHub Pages"   git push origin main   ```4. **Vérifier fonctionnement :**   - ✅ Site accessible sur GitHub Pages   - ✅ PWA installable   - ✅ Service Worker actif   - ✅ SEO optimisé
 
 ---
 
