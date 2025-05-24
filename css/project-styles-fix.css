@@ -1,0 +1,129 @@
+/* ===========================================
+   CORRECTION STYLES PROJETS - PORTFOLIO YANIS
+   Styles glass-effect pour les projets
+   =========================================== */
+
+/* Glass effect pour les projets */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-normal);
+}
+
+.glass-effect:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(100, 255, 218, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+}
+
+/* Amélioration des iframes dans les projets */
+.glass-effect iframe {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+/* Amélioration des images dans les projets */
+.glass-effect img {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Titres des projets */
+.glass-effect h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+}
+
+/* Descriptions des projets */
+.glass-effect p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Liens dans les projets */
+.glass-effect a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.glass-effect a:hover {
+    color: var(--geo-blue);
+    text-decoration: underline;
+}
+
+/* Section padding pour toutes les sections */
+.section-padding {
+    padding: 4rem 0;
+}
+
+/* Container responsive */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero title dans les sections */
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--geo-blue));
+    border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glass-effect {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .glass-effect iframe {
+        height: 250px !important;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .section-padding {
+        padding: 2rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+} 
