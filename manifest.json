@@ -93,11 +93,5 @@
       "icons": [{ "src": "./DATA/icon-96x96.png", "sizes": "96x96" }]
     }
   ],
-  "related_applications": [
-    {
-      "platform": "web",
-      "url": "https://yanis-lepesant.fr"
-    }
-  ],
   "prefer_related_applications": false
-} 
+}   
