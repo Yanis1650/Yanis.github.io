@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Yanis Lepesant | Géomatique SIGAT</title>
+    <meta name="description" content="Portfolio de Yanis Lepesant, étudiant en Master SIGAT - Spécialiste en Géomatique, SIG, et Télédétection">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="navbar">
+            <div class="logo">Gehome</div>
+            
+            <ul class="nav-links">
+                <li><a href="#" class="tab-link active" data-tab="Webmapping">Webmapping</a></li>
+                <li><a href="#" class="tab-link" data-tab="Cartographie">Cartographie</a></li>
+                <li><a href="#" class="tab-link" data-tab="Code">Code</a></li>
+                <li><a href="#" class="tab-link" data-tab="Design">Design</a></li>
+                <li><a href="#" class="tab-link" data-tab="Atelier">Atelier</a></li>
+                <li><a href="#" class="tab-link" data-tab="Urbanisme">Urbanisme</a></li>
+                <li><a href="#" class="tab-link" data-tab="Télédétection">Télédétection</a></li>
+            </ul>
+            
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="intro">
+            <div class="background-shape">
+                <div class="content">
+                    <div class="text">
+                        <h1>Bienvenue sur mon site !</h1>
+                        <p>Cartographiez votre chemin vers de nouvelles découvertes avec moi - plongez dans le monde de la Géomatique !<br>
+                            Mon nom LEPESANT Yanis, étudiant dans le master SIGAT
+                            <a href="mailto:lepesantya@gmail.com" class="adresse-mail">lepesantya@gmail.com</a>
+                        </p>
+                        <a href="https://www.linkedin.com/in/yanis-lepesant" target="_blank" class="logo-LinkedIn">
+                            <img src="DATA/linkedin (3).png" alt="LinkedIn" width="50" height="50">
+                        </a>
+                    </div>
+                </div> 
+                <div class="intro-image">
+                    <img src="./DATA/DSCF0440.jpg" alt="Photo de Yanis Lepesant">
+                </div>
+                <a href="./DATA/COMPETENCES/CV_LEPESANT_YANIS.pdf" class="download-cv-button" download>Download CV</a>
+            </div>
+        </section>
+        
+        <section class="icon-section">
+            <div class="icon-row">
+                <!-- Python Icon -->
+                <div class="icon">
+                    <img src="./DATA/python.png" alt="Icone Python"/>
+                    <span class="icon-text">Python</span>
+                </div>
+                <!-- HTML5 Icon -->
+                <div class="icon">
+                    <img src="./DATA/html-5.png" alt="Icone HTML5"/>
+                    <span class="icon-text">HTML5</span>
+                </div>
+                <!-- JavaScript Icon -->
+                <div class="icon">
+                    <img src="./DATA/script-java.png" alt="Icone JavaScript"/>
+                    <span class="icon-text">JavaScript</span>
+                </div>
+                <!-- CSS3 Icon -->
+                <div class="icon">
+                    <img src="./DATA/css-3.png" alt="Icone CSS3"/>
+                    <span class="icon-text">CSS3</span>
+                </div>
+                <!-- ArcGIS Icon -->
+                <div class="icon">
+                    <img src="./DATA/ArcGIS_logo.png" alt="Icone ArcGIS"/>
+                    <span class="icon-text">ArcGIS</span>
+                </div>
+                <!-- QGIS Icon -->
+                <div class="icon">
+                    <img src="./DATA/qgis-icon128.png" alt="Icone QGIS"/>
+                    <span class="icon-text">QGIS</span>
+                </div>
+                <!-- RStudio Icon -->
+                <div class="icon">
+                    <img src="./DATA/RStudio_Logo.png" alt="Icone RStudio"/>
+                    <span class="icon-text">RStudio</span>
+                </div>
+                <!-- ADOBE illustrator Icon -->
+                <div class="icon">
+                    <img src="./DATA/adobe-illustrator.png" alt="Icone adobe-illustrator"/>
+                    <span class="icon-text">Adobe-illustrator</span>
+                </div>
+                <!-- PostgreSQL Icon -->
+                <div class="icon">
+                    <img src="./DATA/postgre.png" alt="Icone PostgreSQL"/>
+                    <span class="icon-text">PostgreSQL</span>
+                </div>
+                <!-- VisualStudio Code Icon -->
+                <div class="icon">
+                    <img src="./DATA/visual-basic.png" alt="Icone VisualStudio Code"/>
+                    <span class="icon-text">VisualStudio Code</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Section Webmapping -->
+    <section id="Webmapping" class="tab-content active">
+        <div class="project">
+            <iframe src="DATA/WEB/extrusion/index.html" width="100%" height="400" frameborder="1"></iframe>
+            <p>Carte interactive de représentation de données venant de l'open data de Rennes Métropole<br>
+            Basée sur le tutoriel de Boris Mericskay. <a style="color: red;" href="https://geotribu.fr/articles/2021/2021-02-23_carte_ligne_libre/" target="_blank">Cliquez-ici</a>
+            </p>
+        </div>
+        <div class="project" style="background-color: #FFFFFF; border-radius: 5px;">
+            <iframe src="DATA/WEB/d-chetterie-maplibre-gl-js-16-02/d-chetterie-maplibre-gl-js-16-02/dist/index.html" width="100%" height="400" frameborder="1" style="margin-bottom: 20px;"></iframe>
+            <p style="color:black;">Visualisation des déchetteries et de leurs attributs de Rennes Métropole à partir d'un fichier Geojson</p>
+        </div>
+        <div class="project">
+            <iframe src="DATA/WEB/java_mardi/java_mardi/dist/index.html" width="100%" height="400" frameborder="1"></iframe>
+            <p>Carte interactive de représentation de données venant de l'open data de Rennes Métropole</p>
+        </div>
+    </section>
+
+    <!-- Section Cartographie -->
+    <section id="Cartographie" class="tab-content">
+        <div class="content-container">
+            <div class="text-content">
+                <h3>Carte bivariée des taux de mortalité et des ménages seuls en France</h3>
+                <p>Explorez le paysage démographique de la France avec la carte bivariée, 
+                    illustrant la relation entre les taux de mortalité et les proportions de ménages seuls. 
+                    La carte, basée sur des données de 2019, révèle que la moyenne nationale de mortalité est
+                    de 10%, avec 37% des ménages vivant seuls. Elle met en évidence 230 zones de vie 
+                    particulièrement touchées par cette dualité. 
+                    Chaque couleur et nuance de la carte est un récit, 
+                    transformé en visuel grâce à QGIS et peaufiné avec Adobe Illustrator pour une clarté maximale.</p>
+            </div>
+            <div class="image-container">
+                <img src="DATA/CARTES/bivariee.jpg" alt="Carte Bivariée des Taux de Mortalité et Ménages Seuls en France">
+            </div>
+        </div>
+        
+        <div class="content-container">
+            <div class="text-content">
+                <h3>Données de flux de transports au format GTFS</h3>
+                <p>Découvrez la vitalité du réseau de transport de Grenoble avec une analyse GTFS détaillée. 
+                    Nous avons plongé dans les données pour révéler les vitesses moyennes des trajets, 
+                    mettant en lumière une métropole qui bouge rapidement, surtout en son cœur urbain. 
+                    L'analyse poussée, réalisée avec Rstudio, et la représentation cartographique précise 
+                    grâce à QGIS, ensuite peaufiné avec Adobe Illustrator pour une clarté maximale.</p>
+            </div>
+            <div class="image-container">
+                <img src="DATA/CARTES/GTFS.jpg" alt="Analyse des transports GTFS Grenoble">
+            </div>
+        </div>
+        
+        <div class="content-container">
+            <div class="text-content">
+                <h3>Cartogramme de l'accidentologie des départements Français</h3>
+                <p>Plongez au cœur des chiffres de la sécurité routière avec notre cartographie innovante, 
+                    issue de l'observatoire national des accidents routiers. 
+                    Cette étude révèle une réalité contrastée de la mortalité sur les routes françaises, 
+                    avec une représentation visuelle saisissante des disparités régionales.
+                    Grâce à une analyse réalisée via Rstudio et une symbologie claire élaborée sous QGIS, notre mise en page, effectuée avec Adobe Illustrator, 
+                    met en perspective l'ampleur et la répartition des accidents corporels et mortels.</p>
+            </div>
+            <div class="image-container">
+                <img src="DATA/CARTES/ACCIDENTS_ANA.png" alt="Cartogramme accidentologie France">
+            </div>
+        </div>
+        
+        <div class="content-container">
+            <div class="text-content">
+                <h3>Les départements Français les plus attractifs</h3>
+                <p>Découvrez la dynamique de l'installation des ménages à travers la France avec une carte détaillée, 
+                    qui dévoile les tendances de mobilité résidentielle sur deux ans. L'analyse, soutenue par des techniques de traitement avancées sous Rstudio et enrichie par 
+                    une symbologie explicite sous QGIS, est présentée dans une mise en page claire et intuitive grâce à Adobe Illustrator. Cette visualisation cartographique 
+                    révèle non seulement les chiffres des installations récentes mais aussi les motifs sous-jacents de l'urbanisation et des choix résidentiels des Français.</p>
+            </div>
+            <div class="image-container">
+                <img src="DATA/CARTES/expat_menages.jpg" alt="Attractivité départements français">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Code -->
+    <section id="Code" class="tab-content">
+        <div class="project">
+            <h1>Projet de cours M2</h1>
+            <iframe src="DATA/PROJETS/Script1 (1).html" width="100%" height="600px"></iframe>
+            <p>Ces données, qui reflètent les transactions immobilières récentes, offrent une mine d'informations précieuses pour l'analyse du marché, permettant de cartographier les valeurs 
+                immobilières et d'identifier des modèles de développement ou de stagnation.<br>
+                En collaboration avec Angeline Pinilo et Antoine Soumet sur le logiciel Rstudio.
+            </p>
+        </div>
+        <div class="project">
+            <h1>Projet de cours M2</h1>
+            <iframe src="./DATA/PROJETS/Script4 (1).html" width="100%" height="600px"></iframe>
+            <p>Visualisation cartographique des données DVF sur le logiciel Rstudio</p>
+        </div>
+        <div class="project">
+            <h1>Projet de cours M2</h1>
+            <iframe src="./DATA/PROJETS/MODEL BUILDER.pdf" width="100%" height="600px"></iframe>
+            <p>Traitement de données avec FME et arcgis pro en chaînes de traitement<br>
+                En collaboration avec Angeline Pinilo, Antoine Soumet, Morgan Allice.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Design -->
+    <section id="Design" class="tab-content">
+        <div class="project my-new-class">
+            <h1>Projet de datavisualisation</h1>
+            <img src="DATA/CARTES/RolandGarros.jpg" alt="Datavisualisation Roland Garros">
+            <p>Datavisualisation réalisé en Collaboration avec Antoine SOUMET.</p>
+        </div>
+        <div class="project my-new-class">
+            <h1>Projet de vulgarisation d'un thème en Géomatique</h1>
+            <img src="DATA/CARTES/poster.jpg" alt="Poster covoiturage dynamique">
+            <p>Poster sur le thème du covoiturage dynamique dans sa forme actuelle et prospective</p>
+        </div>
+    </section>
+
+    <!-- Section Atelier -->
+    <section id="Atelier" class="tab-content">
+        <div class="project">
+            <h1>Atelier professionnel M2</h1>
+            <iframe src="DATA/PROJETS/RAPPORT_FINAL.pdf" width="100%" height="600px"></iframe>
+            <p>Etude d'une potentielle implantation de Michelin dans l'agriculture de précision<br>
+                En collaboration avec une partie du master 2 SIGAT
+            </p>
+        </div>
+        <div class="project">
+            <h1>Atelier professionnel M1</h1>
+            <iframe src="DATA/PROJETS/2. Restitution complète REB.pdf" width="100%" height="600px"></iframe>
+            <p>Réseau Entreprendre Bretagne : réalisation d'un diagnostic territorial de l'activité du Réseau Entreprendre Bretagne depuis les 20 dernières années et analyse d'opportunités de développement du réseau.<br>
+                En collaboration avec Angeline Pinilo, Felicia Noël, Morgan Allice, Hugo Frerou, Baptiste Lunel</p>
+        </div>
+        <div class="project">
+            <h1>Atelier professionnel M1</h1>
+            <iframe src="DATA/PROJETS/Tutoriel Excel - Flourish.pdf" width="100%" height="600px"></iframe>
+            <p>Réseau Entreprendre Bretagne : réalisation d'un tutoriel de formation sur la plateforme de datavisualisation Flourish.</p>
+        </div>
+    </section>
+
+    <!-- Section Urbanisme -->
+    <section id="Urbanisme" class="tab-content">
+        <div class="project">
+            <h1>Etude d'un Plan Local d'Urbanisme en M1</h1>
+            <iframe src="DATA/PROJETS/Documents_Planification_Dossier.pdf" width="100%" height="600px"></iframe>
+            <p>Cette étude approfondie examine l'impact des Plans Locaux d'Urbanisme (PLU) en Corse, 
+                en mettant un accent particulier sur les litiges et contentieux qui en découlent<br>
+                En collaboration avec Saïd Khatir, Antoine Soumet, Jonas Constant.
+            </p>
+        </div>
+        <div class="project">
+            <h1>Diagnostic territorial de la commune de Guichen licence 3</h1>
+            <iframe src="DATA/PROJETS/Diagnostic-territorial-Guichen.pdf" width="100%" height="600px"></iframe>
+            <p>Le diagnostic territorial réalisé sur la commune de Guichen en Bretagne est une évaluation approfondie qui sert de socle pour la planification 
+                et le développement urbain futur. Cette étude prend en compte 
+                une multitude de facteurs, notamment la démographie, 
+                l'économie locale, l'environnement naturel, les infrastructures existantes et 
+                le tissu social. Elle met en lumière les atouts de la commune, 
+                tout en identifiant les défis à relever, tels que les besoins en logement ou la préservation de la biodiversité. 
+                Ce diagnostic est conçu pour être un outil d'aide à la décision pour les acteurs locaux, 
+                en fournissant une vision claire et des recommandations pour un développement durable de Guichen.<br>
+                En collaboration avec Langlamet Élise, Le Dez Aurégane et Morel Quentin.
+            </p>
+        </div>
+        <div class="project">
+            <h1>Etude pour l'implantation d'un projet Urbain</h1>
+            <iframe src="DATA/PROJETS/Projet-urbain-Guichen-Le-Tas-Faou-de-Guichen.pdf" width="100%" height="600px"></iframe>
+            <p>Notre projet urbain pour Guichen est conçu en étroite synergie 
+                avec le diagnostic territorial pour assurer une intégration harmonieuse et durable dans le tissu local. 
+                L'étude met en avant des solutions innovantes qui s'alignent avec les besoins spécifiques de la commune, 
+                en prenant en compte les aspects socio-économiques, environnementaux et culturels.<br>
+                En collaboration avec Langlamet Élise, Le Dez Aurégane et Morel Quentin.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Télédétection -->
+    <section id="Télédétection" class="tab-content">
+        <div class="project">
+            <h1>Projet de Télédétection M1</h1>
+            <iframe src="./DATA/PROJETS/matricielle.pdf" width="100%" height="600px"></iframe>
+            <p>Réalisation d'une étude sur l'implantation d'une autoroute près de Grenoble<br>
+                En collaboration avec Angeline Pinilo
+            </p>
+        </div>
+        <div class="project">
+            <h1>Projet de Télédétection M1</h1>
+            <iframe src="./DATA/PROJETS/Dossier_Salt Lake City.pdf" width="100%" height="600px"></iframe>
+            <p>Ce travail de recherche utilise des techniques de télédétection pour examiner les causes et les conséquences de la régression lacustre dans cette région critique des États-Unis<br>
+                En collaboration avec Jules Delalande et Jonas Constant
+            </p>
+        </div>
+        <div class="project">
+            <h1>Projet de Télédétection Licence 3</h1>
+            <iframe src="./DATA/PROJETS/Télédétection_Lepesant Yanis (3).pdf" width="100%" height="600px"></iframe>
+            <p>Réalisation d'une étude sur les feux de forêts au Canada</p>
+        </div>
+    </section>
+    
+    <!-- Scripts modulaires -->
+    <script src="./js/navigation.js"></script>
+    <script src="./js/tabs.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html> 

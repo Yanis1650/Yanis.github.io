@@ -1,0 +1,76 @@
+/* ===========================================
+   STYLES PROJETS ET SECTIONS
+   =========================================== */
+
+/* Styles généraux pour les projets */
+.project {
+    display: block;
+    margin-bottom: 20px;
+    padding: 1rem;
+}
+
+/* Images dans les projets */
+.project img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    filter: drop-shadow(2px 2px 2px blue);
+}
+
+/* Images spécifiques aux onglets */
+.tab-content .project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    filter: drop-shadow(2px 2px 2px blue);
+}
+
+/* iframes dans les projets */
+.project iframe {
+    border-radius: 15px;
+}
+
+/* Sections de contenu avec layout flexbox */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+/* Contenu textuel dans les sections */
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+}
+
+/* Conteneur d'images dans les sections */
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(209, 208, 208, 0.1);
+}
+
+/* Section Design spécifique */
+#Design {
+    display: block;
+}
+
+/* Classe spéciale pour certains projets */
+.my-new-class {
+    height: auto;
+    border-radius: 15px;
+} 

@@ -1,0 +1,115 @@
+/* ===========================================
+   STYLES SECTION INTRODUCTION
+   =========================================== */
+
+/* Section d'introduction principale */
+.intro {
+    font-size: 3rem;
+    position: relative;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #1b1f24;
+    color: white;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.intro .content,
+.intro .intro-image {
+    text-align: center;
+}
+
+/* Contenu textuel de l'intro */
+.content {
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    max-width: 100%;
+}
+
+/* Texte d'introduction */
+.text {
+    font-size: 10rem;
+    max-width: 600px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+.text h1 {
+    font-size: 4rem;
+    margin-left: 1rem;
+}
+
+/* Image d'introduction */
+.intro-image {
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Forme en arrière-plan */
+.background-shape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Conteneur des statistiques */
+.stats {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.stats div {
+    margin: 1rem;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: auto;
+}
+
+.stat {
+    text-align: center;
+}
+
+.number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.descriptor {
+    font-size: 1rem;
+} 

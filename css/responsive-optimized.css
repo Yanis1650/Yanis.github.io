@@ -1,0 +1,582 @@
+/* ===========================================
+   STYLES RESPONSIVE OPTIMISÉS - PORTFOLIO YANIS
+   Mobile-First Approach & Multi-Device Support
+   =========================================== */
+
+/* === VARIABLES RESPONSIVE === */
+:root {
+    /* Breakpoints optimisés */
+    --mobile-sm: 320px;
+    --mobile-md: 375px;
+    --mobile-lg: 414px;
+    --tablet-sm: 768px;
+    --tablet-lg: 1024px;
+    --desktop-sm: 1200px;
+    
+    /* Spacing mobile */
+    --mobile-space-xs: 0.25rem;
+    --mobile-space-sm: 0.5rem;
+    --mobile-space-md: 1rem;
+    --mobile-space-lg: 1.5rem;
+    --mobile-space-xl: 2rem;
+}
+
+/* === BASE MOBILE-FIRST STYLES === */
+body {
+    font-size: 16px; /* Base optimale pour mobile */
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%; /* Empêche l'agrandissement auto sur iOS */
+    -webkit-tap-highlight-color: transparent; /* Supprime surbrillance tactile */
+}
+
+/* Touch-friendly pour tous les éléments interactifs */
+button, 
+.btn-primary, 
+.btn-secondary, 
+.tab-link, 
+.modern-nav-link, 
+.logo, 
+.modern-logo,
+.navbar-cta,
+.mobile-cta {
+    min-height: 44px; /* Taille tactile recommandée Apple */
+    min-width: 44px;
+    touch-action: manipulation; /* Optimise les interactions tactiles */
+}
+
+/* === SMARTPHONES PORTRAIT (320px - 480px) === */
+@media (max-width: 480px) {
+    /* === LAYOUT GLOBAL === */
+    .container, 
+    .hero-container, 
+    .skills-container {
+        padding: 0 var(--mobile-space-md) !important;
+        margin: 0;
+        max-width: 100%;
+    }
+    
+    /* === NAVIGATION MOBILE === */
+    .modern-navbar,
+    .navbar {
+        padding: 0 !important;
+        height: 60px !important;
+    }
+    
+    .navbar-container {
+        padding: 0 var(--mobile-space-md) !important;
+        height: 60px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+    
+    .modern-logo,
+    .navbar .logo {
+        font-size: 1.125rem !important;
+        height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .hamburger,
+    .modern-hamburger {
+        width: 40px !important;
+        height: 40px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+    }
+    
+    .hamburger-line {
+        width: 18px !important;
+        height: 2px !important;
+        margin: 1.5px 0 !important;
+    }
+    
+    /* Menu mobile fullscreen */
+    .mobile-menu {
+        padding: 0 !important;
+    }
+    
+    .mobile-menu-header {
+        padding: var(--mobile-space-sm) var(--mobile-space-md) !important;
+        min-height: 60px !important;
+    }
+    
+    .mobile-menu-content {
+        padding: var(--mobile-space-lg) var(--mobile-space-md) !important;
+    }
+    
+    .mobile-nav-link {
+        font-size: 1rem !important;
+        padding: var(--mobile-space-sm) var(--mobile-space-md) !important;
+        width: 100% !important;
+        margin-bottom: var(--mobile-space-xs) !important;
+        border-radius: 12px !important;
+        min-height: 48px !important;
+    }
+    
+    .nav-icon {
+        font-size: 1.1em !important;
+        margin-right: 0.5rem !important;
+        width: 20px !important;
+        height: 20px !important;
+    }
+    
+    .mobile-cta {
+        font-size: 1rem !important;
+        padding: var(--mobile-space-sm) var(--mobile-space-lg) !important;
+        min-width: 200px !important;
+        min-height: 48px !important;
+    }
+    
+    /* === HERO SECTION MOBILE === */
+    .hero-section {
+        min-height: 90vh !important;
+        padding: var(--mobile-space-xl) 0 !important;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr !important;
+        gap: var(--mobile-space-xl) !important;
+        text-align: center !important;
+    }
+    
+    .hero-greeting {
+        font-size: 1rem !important;
+        margin-bottom: var(--mobile-space-sm) !important;
+    }
+    
+    .hero-name {
+        font-size: clamp(2rem, 8vw, 3rem) !important;
+        line-height: 1.1 !important;
+        margin-bottom: var(--mobile-space-sm) !important;
+    }
+    
+    .hero-role {
+        font-size: clamp(1.125rem, 5vw, 1.5rem) !important;
+        margin-bottom: var(--mobile-space-md) !important;
+    }
+    
+    .hero-description {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: var(--mobile-space-lg) !important;
+        max-width: 100% !important;
+    }
+    
+    /* === IMAGE PROFILE MOBILE === */
+    .profile-image {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    
+    .profile-container::before {
+        width: 240px !important;
+        height: 240px !important;
+        top: -20px !important;
+        left: -20px !important;
+    }
+    
+    .profile-container::after {
+        width: 280px !important;
+        height: 280px !important;
+        top: -40px !important;
+        left: -40px !important;
+    }
+    
+    /* === BOUTONS HERO MOBILE === */
+    .hero-actions {
+        flex-direction: column !important;
+        gap: var(--mobile-space-md) !important;
+        width: 100% !important;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100% !important;
+        padding: var(--mobile-space-lg) var(--mobile-space-md) !important;
+        font-size: 1rem !important;
+        justify-content: center !important;
+        border-radius: 12px !important;
+    }
+    
+    /* Info hero mobile */
+    .hero-info {
+        flex-direction: column !important;
+        gap: var(--mobile-space-sm) !important;
+        margin-top: var(--mobile-space-lg) !important;
+        align-items: center !important;
+    }
+    
+    /* === COMPÉTENCES MOBILE === */
+    .skills-section {
+        padding: var(--mobile-space-xl) 0 !important;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--mobile-space-md) !important;
+    }
+    
+    .skill-card {
+        padding: var(--mobile-space-lg) !important;
+        margin-bottom: var(--mobile-space-sm) !important;
+    }
+    
+    .skill-header {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: var(--mobile-space-sm) !important;
+    }
+    
+    .skill-icon {
+        width: 40px !important;
+        height: 40px !important;
+        margin: 0 auto !important;
+    }
+    
+    .skill-info h3 {
+        font-size: 1.125rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    
+    /* Stats mobile */
+    .skills-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--mobile-space-md) !important;
+    }
+    
+    .stat-number {
+        font-size: 1.875rem !important;
+    }
+    
+    /* === PROJETS MOBILE === */
+    .project {
+        padding: var(--mobile-space-md) !important;
+        margin-bottom: var(--mobile-space-lg) !important;
+        border-radius: 12px !important;
+    }
+    
+    .project iframe {
+        height: 250px !important;
+        border-radius: 8px !important;
+    }
+    
+    .project img {
+        max-width: 100% !important;
+        border-radius: 8px !important;
+    }
+    
+    /* === SECTIONS DE CONTENU MOBILE === */
+    .tab-content {
+        padding: var(--mobile-space-lg) 0 !important;
+    }
+    
+    .content-container {
+        flex-direction: column !important;
+        gap: var(--mobile-space-lg) !important;
+        text-align: center !important;
+    }
+    
+    .text-content {
+        padding: 0 !important;
+    }
+    
+    .text-content h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: var(--mobile-space-sm) !important;
+    }
+    
+    /* === TYPOGRAPHIE MOBILE === */
+    .hero-title {
+        font-size: clamp(1.875rem, 6vw, 2.5rem) !important;
+        text-align: center !important;
+        margin-bottom: var(--mobile-space-lg) !important;
+    }
+    
+    h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    /* === SUPPORT LEGACY === */
+    .nav-links {
+        display: none !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .nav-links li {
+        padding: 0.5rem 0 !important;
+    }
+
+    .hamburger {
+        display: block !important;
+    }
+    
+    .intro-image img {
+        max-width: 200px !important;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem !important;
+        margin-top: 20px !important;
+    }
+
+    .intro p {
+        font-size: 1rem !important;
+    }
+    
+    .icon-row {
+        justify-content: center !important;
+        margin: var(--mobile-space-lg) !important;
+        flex-wrap: wrap !important;
+        gap: var(--mobile-space-md) !important;
+    }
+
+    .icon {
+        flex-basis: calc(50% - var(--mobile-space-sm)) !important;
+        text-align: center !important;
+        margin: var(--mobile-space-sm) !important;
+    }
+    
+    .icon img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+/* === SMARTPHONES LANDSCAPE (481px - 767px) === */
+@media (min-width: 481px) and (max-width: 767px) {
+    .hero-container {
+        grid-template-columns: 1fr 1fr !important;
+        gap: var(--space-lg) !important;
+        align-items: center !important;
+    }
+    
+    .hero-content {
+        text-align: left !important;
+    }
+    
+    .profile-image {
+        width: 240px !important;
+        height: 240px !important;
+    }
+    
+    .hero-actions {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: var(--space-sm) !important;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: auto !important;
+        flex: 1 !important;
+        min-width: 140px !important;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .skills-stats {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+    
+    .icon-row {
+        justify-content: center !important;
+        gap: var(--space-md) !important;
+    }
+    
+    .icon {
+        flex-basis: auto !important;
+        margin: var(--space-sm) !important;
+    }
+}
+
+/* === TABLETTES PORTRAIT (768px - 1023px) === */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container,
+    .hero-container,
+    .skills-container {
+        padding: 0 var(--space-md) !important;
+        max-width: 768px !important;
+    }
+    
+    .modern-navbar,
+    .navbar {
+        height: 70px !important;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr 1fr !important;
+        gap: var(--space-xl) !important;
+    }
+    
+    .profile-image {
+        width: 280px !important;
+        height: 280px !important;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-lg) !important;
+    }
+    
+    .hero-actions {
+        flex-direction: row !important;
+        gap: var(--space-md) !important;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: auto !important;
+        padding: 1rem 1.5rem !important;
+    }
+    
+    .modern-nav-menu {
+        gap: 1.5rem !important;
+    }
+    
+    .modern-nav-link {
+        font-size: 0.9rem !important;
+    }
+    
+    .project iframe {
+        height: 350px !important;
+    }
+    
+    .content-container {
+        flex-direction: row !important;
+        gap: var(--space-xl) !important;
+        align-items: center !important;
+    }
+    
+    .icon-row {
+        justify-content: center !important;
+        gap: var(--space-lg) !important;
+        margin: var(--space-xl) !important;
+    }
+}
+
+/* === TABLETTES LANDSCAPE & PETITS PORTABLES (1024px - 1199px) === */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .container,
+    .hero-container,
+    .skills-container {
+        max-width: 1024px !important;
+        padding: 0 var(--space-lg) !important;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    .profile-image {
+        width: 300px !important;
+        height: 300px !important;
+    }
+    
+    .modern-nav-menu {
+        gap: 2rem !important;
+    }
+}
+
+/* === GRANDS ÉCRANS (1200px+) === */
+@media (min-width: 1200px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    .profile-image {
+        width: 320px !important;
+        height: 320px !important;
+    }
+}
+
+/* === OPTIMISATIONS TOUCH === */
+@media (hover: none) and (pointer: coarse) {
+    .skill-card:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .profile-image:hover {
+        transform: none !important;
+    }
+}
+
+/* === OPTIMISATIONS LANDSCAPE MOBILE === */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto !important;
+        padding: var(--space-md) 0 !important;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr 1fr !important;
+        gap: var(--space-md) !important;
+    }
+    
+    .profile-image {
+        width: 180px !important;
+        height: 180px !important;
+    }
+    
+    .hero-name {
+        font-size: 2rem !important;
+    }
+}
+
+/* === PERFORMANCES MOBILE === */
+.skill-card,
+.btn-primary,
+.btn-secondary,
+.profile-container {
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.tab-content,
+.mobile-menu {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+/* === CLASSES UTILITAIRES === */
+.hide-mobile { display: block; }
+.show-mobile { display: none; }
+
+@media (max-width: 768px) {
+    .hide-mobile { display: none !important; }
+    .show-mobile { display: block !important; }
+    .mobile-text-center { text-align: center !important; }
+}
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+} 

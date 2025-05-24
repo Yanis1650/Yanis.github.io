@@ -1,0 +1,55 @@
+/* ===========================================
+   STYLES BOUTONS ET LIENS
+   =========================================== */
+
+/* Style de base pour les boutons */
+.adresse-mail {
+    padding: 10px 20px;
+    color: white;
+    background: linear-gradient(to right, #434343 0%, black 100%);
+    border: 2px solid #4f4f4f;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(173, 170, 170, 0.2);
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 50px;
+}
+
+.adresse-mail:hover {
+    background: linear-gradient(to left, #434343 0%, black 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Bouton de téléchargement CV */
+.download-cv-button {
+    padding: 20px 30px;
+    color: white;
+    background: linear-gradient(to right, #434343 0%, black 100%);
+    border: 2px solid #4f4f4f;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(173, 170, 170, 0.2);
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 55px;
+}
+
+.download-cv-button:hover {
+    background: linear-gradient(to left, #434343 0%, black 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo LinkedIn */
+.logo-LinkedIn {
+    position: relative;
+    top: -30px;
+} 
