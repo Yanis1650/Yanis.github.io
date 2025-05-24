@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yanis Lepesant | Géomaticien & Analyste SIG</title>
+    <meta name="description" content="Portfolio de Yanis Lepesant - Géomaticien spécialisé en SIG, télédétection et analyse territoriale. Master SIGAT.">
+    <meta name="keywords" content="géomatique, SIG, télédétection, cartographie, webmapping, SIGAT, portfolio, analyse territoriale">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yanis Lepesant | Géomaticien & Analyste SIG">
+    <meta property="og:description" content="Portfolio de Yanis Lepesant - Spécialiste en Géomatique et Analyse Territoriale">
+    <meta property="og:image" content="./DATA/DSCF0440.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Yanis Lepesant | Géomaticien & Analyste SIG">
+    <meta property="twitter:description" content="Portfolio de Yanis Lepesant - Spécialiste en Géomatique et Analyse Territoriale">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./DATA/favicon.ico">
+    
+    <!-- CSS Modules Optimisés -->
+    <link rel="stylesheet" href="./css/modern-base.css">
+    <link rel="stylesheet" href="./css/modern-navbar.css">
+    <link rel="stylesheet" href="./css/modern-hero.css">
+    <link rel="stylesheet" href="./css/modern-skills.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/responsive-optimized.css">
+</head>
+<body>
+    <!-- Navigation Moderne -->
+    <nav class="modern-navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="modern-logo">Yanis</a>
+            
+            <ul class="modern-nav-menu">
+                <li class="modern-nav-item">
+                    <a href="#" class="modern-nav-link tab-link active" data-tab="Webmapping">Webmapping</a>
+                </li>
+                <li class="modern-nav-item">
+                    <a href="#" class="modern-nav-link tab-link" data-tab="Cartographie">Cartographie</a>
+                </li>
+                <li class="modern-nav-item">
+                    <a href="#" class="modern-nav-link tab-link" data-tab="Code">Code</a>
+                </li>
+                <li class="modern-nav-item">
+                    <a href="#" class="modern-nav-link tab-link" data-tab="Design">Design</a>
+                </li>
+                <li class="modern-nav-item">
+                    <a href="#" class="modern-nav-link tab-link" data-tab="Atelier">Atelier</a>
+                </li>
+                <li class="modern-nav-item">
+                    <a href="#" class="modern-nav-link tab-link" data-tab="Urbanisme">Urbanisme</a>
+                </li>
+                <li class="modern-nav-item">
+                    <a href="#" class="modern-nav-link tab-link" data-tab="Télédétection">Télédétection</a>
+                </li>
+            </ul>
+            
+            <a href="mailto:lepesantya@gmail.com" class="navbar-cta">Contact</a>
+            
+            <!-- Menu Hamburger -->
+            <button class="modern-hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        
+        <div class="scroll-indicator" id="scrollIndicator"></div>
+    </nav>
+
+    <!-- Menu Mobile Optimisé -->
+    <div class="mobile-menu" id="mobileMenu">
+        <!-- Header du menu mobile -->
+        <div class="mobile-menu-header">
+            <h3 class="mobile-menu-title">Navigation</h3>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Fermer le menu">✕</button>
+        </div>
+        
+        <!-- Contenu du menu mobile -->
+        <div class="mobile-menu-content">
+            <ul class="mobile-nav-menu">
+                <li><a href="#" class="mobile-nav-link tab-link" data-tab="Webmapping">
+                    <span class="nav-icon">🗺</span>Webmapping
+                </a></li>
+                <li><a href="#" class="mobile-nav-link tab-link" data-tab="Cartographie">
+                    <span class="nav-icon">🗺</span>Cartographie
+                </a></li>
+                <li><a href="#" class="mobile-nav-link tab-link" data-tab="Code">
+                    <span class="nav-icon">💻</span>Code
+                </a></li>
+                <li><a href="#" class="mobile-nav-link tab-link" data-tab="Design">
+                    <span class="nav-icon">🎨</span>Design
+                </a></li>
+                <li><a href="#" class="mobile-nav-link tab-link" data-tab="Atelier">
+                    <span class="nav-icon">🔧</span>Atelier
+                </a></li>
+                <li><a href="#" class="mobile-nav-link tab-link" data-tab="Urbanisme">
+                    <span class="nav-icon">🏗</span>Urbanisme
+                </a></li>
+                <li><a href="#" class="mobile-nav-link tab-link" data-tab="Télédétection">
+                    <span class="nav-icon">🛰</span>Télédétection
+                </a></li>
+            </ul>
+            <a href="mailto:lepesantya@gmail.com" class="mobile-cta">
+                <span class="cta-icon">📧</span>Contactez-moi
+            </a>
+        </div>
+        
+        <!-- Footer du menu mobile -->
+        <div class="mobile-menu-footer">
+            <p>© 2025 Yanis Lepesant - Géomaticien</p>
+        </div>
+    </div>
+
+    <!-- Page d'accueil -->
+    <main id="home">
+        <!-- Section Hero -->
+        <section class="hero-section" id="heroSection">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="hero-greeting">👋 Bonjour, je suis</p>
+                    <h1 class="hero-name">Yanis Lepesant</h1>
+                    <h2 class="hero-role">Géomaticien & Analyste SIG</h2>
+                    <p class="hero-description">
+                        Passionné par la géomatique et l'analyse territoriale, je transforme les données 
+                        géographiques en insights stratégiques. Spécialisé en SIG, télédétection et 
+                        développement web cartographique.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="./DATA/COMPETENCES/CV_LEPESANT_YANIS.pdf" class="btn-primary" download>
+                            📄 Télécharger mon CV
+                        </a>
+                        <a href="https://www.linkedin.com/in/yanis-lepesant" target="_blank" class="btn-secondary">
+                            💼 LinkedIn
+                        </a>
+                    </div>
+                    
+                    <div class="hero-info">
+                        <div class="info-item">
+                            <span class="info-icon">🎓</span>
+                            <span>Master SIGAT</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>Rennes, France</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📧</span>
+                            <span>lepesantya@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <img src="./DATA/DSCF0440.jpg" alt="Photo de Yanis Lepesant" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Compétences -->
+        <section class="skills-section" id="skillsSection">
+            <div class="skills-container">
+                <div class="skills-header">
+                    <h2 class="skills-title">Mes Compétences</h2>
+                    <p class="skills-subtitle">
+                        Une expertise technique approfondie en géomatique, développement et analyse de données 
+                        géographiques, acquise à travers mes études et projets professionnels.
+                    </p>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Compétence SIG -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <img src="./DATA/qgis-icon128.png" alt="QGIS">
+                            </div>
+                            <div class="skill-info">
+                                <h3>Systèmes d'Information Géographique</h3>
+                                <span class="skill-category">Géomatique</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Maîtrise avancée de QGIS, ArcGIS Pro et PostGIS pour l'analyse spatiale et la gestion de données géographiques.
+                        </p>
+                        <div class="skill-progress">
+                            <div class="progress-label">
+                                <span class="progress-text">Niveau d'expertise</span>
+                                <span class="progress-percentage">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="--progress-width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">QGIS</span>
+                            <span class="skill-tag">ArcGIS</span>
+                            <span class="skill-tag">PostGIS</span>
+                            <span class="skill-tag">Analyse spatiale</span>
+                        </div>
+                    </div>
+
+                    <!-- Compétence Développement -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <img src="./DATA/python.png" alt="Python">
+                            </div>
+                            <div class="skill-info">
+                                <h3>Développement & Programmation</h3>
+                                <span class="skill-category">Informatique</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Développement d'applications géomatiques et d'outils d'analyse avec Python, R, JavaScript et HTML/CSS.
+                        </p>
+                        <div class="skill-progress">
+                            <div class="progress-label">
+                                <span class="progress-text">Niveau d'expertise</span>
+                                <span class="progress-percentage">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="--progress-width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                        </div>
+                    </div>
+
+                    <!-- Compétence Télédétection -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <img src="./DATA/RStudio_Logo.png" alt="Télédétection">
+                            </div>
+                            <div class="skill-info">
+                                <h3>Télédétection & Analyse d'Images</h3>
+                                <span class="skill-category">Observation</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Traitement et analyse d'images satellites pour l'étude de l'environnement et du territoire.
+                        </p>
+                        <div class="skill-progress">
+                            <div class="progress-label">
+                                <span class="progress-text">Niveau d'expertise</span>
+                                <span class="progress-percentage">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="--progress-width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Sentinel</span>
+                            <span class="skill-tag">Landsat</span>
+                            <span class="skill-tag">Google Earth Engine</span>
+                            <span class="skill-tag">Classification</span>
+                        </div>
+                    </div>
+
+                    <!-- Compétence Data Viz -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <img src="./DATA/adobe-illustrator.png" alt="Data Viz">
+                            </div>
+                            <div class="skill-info">
+                                <h3>Cartographie & Data Visualisation</h3>
+                                <span class="skill-category">Design</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Création de cartes et visualisations de données percutantes avec Adobe Illustrator et outils web.
+                        </p>
+                        <div class="skill-progress">
+                            <div class="progress-label">
+                                <span class="progress-text">Niveau d'expertise</span>
+                                <span class="progress-percentage">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="--progress-width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Adobe Illustrator</span>
+                            <span class="skill-tag">D3.js</span>
+                            <span class="skill-tag">Leaflet</span>
+                            <span class="skill-tag">Mapbox</span>
+                        </div>
+                    </div>
+
+                    <!-- Compétence Bases de données -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <img src="./DATA/postgre.png" alt="Bases de données">
+                            </div>
+                            <div class="skill-info">
+                                <h3>Bases de Données Spatiales</h3>
+                                <span class="skill-category">Data Management</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Gestion et optimisation de bases de données géographiques avec PostgreSQL/PostGIS.
+                        </p>
+                        <div class="skill-progress">
+                            <div class="progress-label">
+                                <span class="progress-text">Niveau d'expertise</span>
+                                <span class="progress-percentage">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="--progress-width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">PostGIS</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Optimisation</span>
+                        </div>
+                    </div>
+
+                    <!-- Compétence WebMapping -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <img src="./DATA/script-java.png" alt="WebMapping">
+                            </div>
+                            <div class="skill-info">
+                                <h3>WebMapping & Applications Web</h3>
+                                <span class="skill-category">Développement Web</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Développement d'applications cartographiques interactives et de tableaux de bord géographiques.
+                        </p>
+                        <div class="skill-progress">
+                            <div class="progress-label">
+                                <span class="progress-text">Niveau d'expertise</span>
+                                <span class="progress-percentage">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="--progress-width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Leaflet</span>
+                            <span class="skill-tag">OpenLayers</span>
+                            <span class="skill-tag">Mapbox GL JS</span>
+                            <span class="skill-tag">GeoJSON</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistiques -->
+                <div class="skills-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Projets réalisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Années d'études</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Technologies maîtrisées</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Ateliers professionnels</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sections des Projets (reprises de l'ancien fichier) -->
+    <section id="Webmapping" class="tab-content">
+        <div class="container section-padding">
+            <h2 class="hero-title">Webmapping & Cartographie Interactive</h2>
+            <div class="project glass-effect">
+                <iframe src="DATA/WEB/extrusion/index.html" width="100%" height="400" frameborder="0"></iframe>
+                <p>Carte interactive de représentation de données venant de l'open data de Rennes Métropole<br>
+                Basée sur le tutoriel de Boris Mericskay. <a style="color: var(--accent-primary);" href="https://geotribu.fr/articles/2021/2021-02-23_carte_ligne_libre/" target="_blank">En savoir plus</a>
+                </p>
+            </div>
+            <div class="project glass-effect">
+                <iframe src="DATA/WEB/d-chetterie-maplibre-gl-js-16-02/d-chetterie-maplibre-gl-js-16-02/dist/index.html" width="100%" height="400" frameborder="0"></iframe>
+                <p>Visualisation des déchetteries et de leurs attributs de Rennes Métropole à partir d'un fichier GeoJSON</p>
+            </div>
+            <div class="project glass-effect">
+                <iframe src="DATA/WEB/java_mardi/java_mardi/dist/index.html" width="100%" height="400" frameborder="0"></iframe>
+                <p>Carte interactive de représentation de données venant de l'open data de Rennes Métropole</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Cartographie" class="tab-content">
+        <div class="container section-padding">
+            <h2 class="hero-title">Cartographie & Analyse Spatiale</h2>
+            <div class="content-container">
+                <div class="text-content">
+                    <h3>Carte bivariée des taux de mortalité et des ménages seuls en France</h3>
+                    <p>Explorez le paysage démographique de la France avec cette carte bivariée, illustrant la relation entre les taux de mortalité et les proportions de ménages seuls. Basée sur des données de 2019, elle révèle des insights démographiques clés grâce à QGIS et Adobe Illustrator.</p>
+                </div>
+                <div class="image-container">
+                    <img src="DATA/CARTES/bivariee.jpg" alt="Carte Bivariée des Taux de Mortalité et Ménages Seuls en France">
+                </div>
+            </div>
+            <div class="content-container">
+                <div class="text-content">
+                    <h3>Données de flux de transports au format GTFS</h3>
+                    <p>Analyse approfondie des réseaux de transport de Grenoble révélant les vitesses moyennes des trajets. Traitement réalisé avec RStudio et cartographie avec QGIS, finalisée sous Adobe Illustrator.</p>
+                </div>
+                <div class="image-container">
+                    <img src="DATA/CARTES/GTFS.jpg" alt="Analyse des transports GTFS Grenoble">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Code" class="tab-content">
+        <div class="container section-padding">
+            <h2 class="hero-title">Développement & Programmation</h2>
+            <div class="project glass-effect">
+                <h3>Analyse des données DVF - Projet M2</h3>
+                <iframe src="DATA/PROJETS/Script1 (1).html" width="100%" height="600px"></iframe>
+                <p>Analyse des transactions immobilières avec RStudio. Collaboration avec Angeline Pinilo et Antoine Soumet.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Design" class="tab-content">
+        <div class="container section-padding">
+            <h2 class="hero-title">Design & Datavisualisation</h2>
+            <div class="project glass-effect">
+                <h3>Datavisualisation Roland Garros</h3>
+                <img src="DATA/CARTES/RolandGarros.jpg" alt="Datavisualisation Roland Garros">
+                <p>Datavisualisation réalisée en collaboration avec Antoine SOUMET.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Atelier" class="tab-content">
+        <div class="container section-padding">
+            <h2 class="hero-title">Ateliers Professionnels</h2>
+            <div class="project glass-effect">
+                <h3>Étude Michelin - Agriculture de précision</h3>
+                <iframe src="DATA/PROJETS/RAPPORT_FINAL.pdf" width="100%" height="600px"></iframe>
+                <p>Étude d'implantation potentielle de Michelin dans l'agriculture de précision. Collaboration avec le master 2 SIGAT.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Urbanisme" class="tab-content">
+        <div class="container section-padding">
+            <h2 class="hero-title">Urbanisme & Planification</h2>
+            <div class="project glass-effect">
+                <h3>Plan Local d'Urbanisme - Corse</h3>
+                <iframe src="DATA/PROJETS/Documents_Planification_Dossier.pdf" width="100%" height="600px"></iframe>
+                <p>Étude approfondie des PLU en Corse, focus sur les litiges et contentieux. Collaboration avec Saïd Khatir, Antoine Soumet, Jonas Constant.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Télédétection" class="tab-content">
+        <div class="container section-padding">
+            <h2 class="hero-title">Télédétection & Observation</h2>
+            <div class="project glass-effect">
+                <h3>Régression lacustre - Salt Lake City</h3>
+                <iframe src="./DATA/PROJETS/Dossier_Salt Lake City.pdf" width="100%" height="600px"></iframe>
+                <p>Recherche sur la régression lacustre utilisant la télédétection. Collaboration avec Jules Delalande et Jonas Constant.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="./js/navigation.js"></script>
+    <script src="./js/tabs.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/main.js"></script>
+    
+    <!-- Script pour la navbar moderne -->
+    <script>
+        // Gestion du scroll pour la navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Indicateur de progression du scroll
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            scrollIndicator.style.width = scrolled + '%';
+        });
+
+        // Style d'alignement parfait (fix CSS)
+        const style = document.createElement('style');
+        style.textContent = `
+            .navbar-container {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+            }
+            .modern-logo {
+                display: flex !important;
+                align-items: center !important;
+            }
+            .modern-hamburger {
+                display: none !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            @media (max-width: 768px) {
+                .modern-hamburger {
+                    display: flex !important;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Menu hamburger et bouton de fermeture
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+        
+        // Ouvrir/fermer avec hamburger
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                
+                // Empêcher le scroll du body quand le menu est ouvert
+                if (mobileMenu.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+        
+        // Fermer avec le bouton X
+        if (mobileCloseBtn) {
+            mobileCloseBtn.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+        
+        // Fermer en cliquant sur l'arrière-plan
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+
+        // Animation des barres de progression
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        const skillsSection = document.getElementById('skillsSection');
+        if (skillsSection) {
+            skillsObserver.observe(skillsSection);
+        }
+    </script>
+</body>
+</html> 

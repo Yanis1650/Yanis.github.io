@@ -1,0 +1,72 @@
+{
+  "portfolio": {
+    "version": "2.0.0",
+    "title": "Portfolio - Yanis Lepesant | Géomatique SIGAT",
+    "author": {
+      "name": "Yanis Lepesant",
+      "email": "lepesantya@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/yanis-lepesant",
+      "formation": "Master SIGAT - Géomatique"
+    }
+  },
+  "development": {
+    "debug": true,
+    "liveReload": false,
+    "minification": false
+  },
+  "modules": {
+    "css": [
+      "base.css",
+      "navbar.css", 
+      "intro.css",
+      "buttons.css",
+      "icons.css",
+      "projects.css",
+      "responsive.css"
+    ],
+    "js": [
+      "navigation.js",
+      "tabs.js",
+      "animations.js",
+      "main.js"
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "mobile": 480,
+      "tablet": 768,
+      "desktop": 1024
+    }
+  },
+  "animations": {
+    "iconScrollTrigger": 300,
+    "transitionSpeed": "0.3s",
+    "fadeInDelay": 200
+  },
+  "sections": {
+    "default": "Webmapping",
+    "available": [
+      "Webmapping",
+      "Cartographie", 
+      "Code",
+      "Design",
+      "Atelier",
+      "Urbanisme",
+      "Télédétection"
+    ]
+  },
+  "paths": {
+    "assets": "./DATA/",
+    "css": "./css/",
+    "js": "./js/",
+    "images": "./DATA/",
+    "projects": "./DATA/PROJETS/",
+    "maps": "./DATA/CARTES/",
+    "web": "./DATA/WEB/"
+  },
+  "seo": {
+    "description": "Portfolio de Yanis Lepesant, étudiant en Master SIGAT - Spécialiste en Géomatique, SIG, et Télédétection",
+    "keywords": "géomatique, SIG, télédétection, cartographie, webmapping, SIGAT, portfolio",
+    "lang": "fr"
+  }
+} 

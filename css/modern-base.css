@@ -1,0 +1,193 @@
+/* ===========================================
+   STYLES MODERNES 2025 - PORTFOLIO YANIS
+   =========================================== */
+
+/* Import de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Variables CSS modernes */
+:root {
+    /* === COULEURS PRINCIPALES === */
+    --primary-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-bg: #1a1d29;
+    --surface-bg: rgba(255, 255, 255, 0.05);
+    --surface-hover: rgba(255, 255, 255, 0.1);
+    
+    /* === COULEURS GÉOMATIQUE === */
+    --geo-blue: #2E86AB;
+    --geo-orange: #F24236;
+    --geo-green: #42B883;
+    --accent-primary: #64FFDA;
+    --accent-secondary: #FF6B6B;
+    
+    /* === TEXTE === */
+    --text-primary: #ffffff;
+    --text-secondary: #a8b2d1;
+    --text-muted: #8b95a8;
+    
+    /* === TYPOGRAPHIE === */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-size-hero: clamp(3rem, 8vw, 6rem);
+    --font-size-h1: clamp(2rem, 5vw, 3.5rem);
+    --font-size-h2: clamp(1.5rem, 4vw, 2.5rem);
+    --font-size-body: clamp(1rem, 2vw, 1.125rem);
+    
+    /* === ESPACEMENTS === */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+    
+    /* === ANIMATIONS === */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.3s ease-out;
+    --transition-slow: 0.6s ease-out;
+    --bezier-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* === EFFETS === */
+    --blur-glass: blur(10px);
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --shadow-elevation: 0 8px 32px rgba(0, 0, 0, 0.2);
+    --border-radius: 16px;
+    --border-radius-lg: 24px;
+}
+
+/* === RESET MODERNE === */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--secondary-bg);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* === TYPOGRAPHIE MODERNE === */
+.hero-title {
+    font-size: var(--font-size-hero);
+    font-weight: 700;
+    line-height: 1.1;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: var(--space-sm);
+}
+
+.subtitle {
+    font-size: var(--font-size-h2);
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+}
+
+.body-large {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 65ch;
+}
+
+.code {
+    font-family: var(--font-mono);
+    background: var(--surface-bg);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875em;
+    color: var(--accent-primary);
+}
+
+/* === LAYOUT MODERNE === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.section-padding {
+    padding: var(--space-xl) 0;
+}
+
+/* === ANIMATIONS D'ENTRÉE === */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(100, 255, 218, 0.6);
+    }
+}
+
+/* === CLASSES UTILITAIRES === */
+.animate-fade-up {
+    animation: fadeInUp var(--transition-slow) var(--bezier-smooth) both;
+}
+
+.animate-fade-left {
+    animation: fadeInLeft var(--transition-slow) var(--bezier-smooth) both;
+}
+
+.animate-fade-right {
+    animation: fadeInRight var(--transition-slow) var(--bezier-smooth) both;
+}
+
+.glass-effect {
+    background: var(--surface-bg);
+    backdrop-filter: var(--blur-glass);
+    -webkit-backdrop-filter: var(--blur-glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+}
+
+.glow-hover:hover {
+    animation: glow 2s ease-in-out infinite;
+} 

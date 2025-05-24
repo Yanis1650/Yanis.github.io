@@ -1,0 +1,70 @@
+/* ===========================================
+   STYLES NAVIGATION - NAVBAR
+   =========================================== */
+
+/* Conteneur principal de la navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1f24;
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+/* Logo avec effet hover */
+.navbar .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    text-shadow: 4px 4px 8px rgba(30, 144, 255, 0.8);
+    color: #1e90ff;
+}
+
+/* Liste des liens de navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    padding: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1e90ff;
+    text-shadow: 4px 4px 8px rgba(30, 144, 255, 0.8);
+}
+
+/* Menu hamburger pour mobile */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+/* Navigation active (menu hamburger) */
+.nav-links.active {
+    display: flex;
+} 

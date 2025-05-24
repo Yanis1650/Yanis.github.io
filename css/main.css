@@ -1,0 +1,36 @@
+/* ===========================================
+   FICHIER CSS PRINCIPAL - PORTFOLIO YANIS
+   =========================================== */
+
+/* Import des modules CSS */
+@import url('./base.css');
+@import url('./navbar.css');
+@import url('./intro.css');
+@import url('./buttons.css');
+@import url('./icons.css');
+@import url('./projects.css');
+@import url('./responsive.css');
+
+/* ===========================================
+   CONFIGURATION GLOBALE
+   =========================================== */
+
+/* Variables CSS pour une meilleure maintenance */
+:root {
+    --primary-bg: #1b1f24;
+    --text-color: #fff;
+    --accent-color: #1e90ff;
+    --accent-shadow: rgba(30, 144, 255, 0.8);
+    --border-radius: 15px;
+    --transition-speed: 0.3s;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Configuration supplémentaire si nécessaire */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+} 
