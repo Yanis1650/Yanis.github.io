@@ -1,273 +1,167 @@
-# 🎨 Portfolio Yanis Lepesant - Architecture Modulaire
+<div align="center">Yanis Lepesant
 
-> Portfolio personnel de Yanis Lepesant, étudiant en Master SIGAT (Systèmes d'Information Géographique et Analyse Territoriale)
+Data & Backend Engineer · Geospatial Data Specialist
 
-## 📋 Table des matières
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=3000&pause=900&center=true&vCenter=true&width=700&lines=Python+%C2%B7+PostgreSQL+%C2%B7+PostGIS;Data+Engineering+%C2%B7+Backend+%C2%B7+WebGIS;Building+reliable+spatial+data+systems" alt="Typing SVG" /><br/><a href="https://portfolio.drekky.fr/">
+  <img src="https://img.shields.io/badge/Portfolio-111827?style=for-the-badge&logo=googlechrome&logoColor=white" />
+</a>
+<a href="https://www.linkedin.com/in/yanis-lepesant">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a></div>---
 
-- [🏗️ Architecture](#️-architecture)
-- [📁 Structure des fichiers](#-structure-des-fichiers)
-- [🚀 Installation et utilisation](#-installation-et-utilisation)
-- [🔧 Modules](#-modules)
-- [🎨 Styles](#-styles)
-- [📱 Responsive Design](#-responsive-design)
-- [🛠️ Développement](#️-développement)
-- [🔄 Migration](#-migration)
+About me
 
----
+I design and build data pipelines, backend services and geospatial applications.
 
-## 🏗️ Architecture
+My work sits at the intersection of:
 
-Le portfolio utilise une **architecture modulaire** pour une meilleure maintenabilité et organisation du code.
+Data Engineering
+      ↓
+Backend Systems
+      ↓
+PostgreSQL / PostGIS
+      ↓
+Spatial APIs
+      ↓
+WebGIS & Data Visualization
 
-### Principes de conception :
-- ✅ **Séparation des responsabilités** : Chaque module a une fonction spécifique
-- ✅ **Code réutilisable** : Modules indépendants et facilement extensibles
-- ✅ **Performance optimisée** : Chargement modulaire et animations optimisées
-- ✅ **Accessibilité** : Support des standards web et navigation clavier
-- ✅ **Responsive** : Adaptation automatique à tous les écrans
-
----
-
-## 📁 Structure des fichiers
-
-```
-portfolio/
-├── index-new.html          # 🆕 Fichier HTML principal (nouvelle version)
-├── index.html              # 📄 Ancien fichier HTML (backup)
-├── styles.css              # 🎨 Ancien fichier CSS monolithique (backup)
-├── script.js               # ⚙️ Ancien fichier JS monolithique (backup)
-├── css/                    # 🎨 Modules CSS
-│   ├── main.css           # Import principal de tous les modules
-│   ├── base.css           # Styles de base et typographie
-│   ├── navbar.css         # Navigation et menu
-│   ├── intro.css          # Section d'introduction
-│   ├── buttons.css        # Boutons et liens
-│   ├── icons.css          # Icônes et compétences
-│   ├── projects.css       # Projets et sections de contenu
-│   └── responsive.css     # Adaptations mobiles et tablettes
-├── js/                     # ⚙️ Modules JavaScript
-│   ├── main.js            # Gestionnaire principal de l'application
-│   ├── navigation.js      # Gestion navigation et menu hamburger
-│   ├── tabs.js            # Système d'onglets et sections
-│   └── animations.js      # Animations et effets visuels
-├── DATA/                   # 📊 Assets (images, PDF, projets)
-│   ├── CARTES/            # Cartes et visualisations
-│   ├── PROJETS/           # Documents de projets
-│   ├── WEB/               # Projets web interactifs
-│   └── COMPETENCES/       # CV et documents
-└── README.md              # 📖 Cette documentation
-```
+I enjoy transforming raw datasets into reliable, maintainable and production-ready systems.
 
 ---
 
-## 🚀 Installation et utilisation
+Core stack
 
-### Prérequis
-- Navigateur web moderne (Chrome, Firefox, Safari, Edge)
-- Serveur web local (optionnel, pour le développement)
+<div align="center">Data & Backend
 
-### Utilisation
-1. **Option 1 - Fichier local** :
-   ```bash
-   # Ouvrir directement dans le navigateur
-   open index-new.html
-   ```
+<img src="https://skillicons.dev/icons?i=python,postgres,nodejs,js,ts" /><br/><br/>
 
-2. **Option 2 - Serveur local** :
-   ```bash
-   # Avec Python
-   python -m http.server 8000
-   
-   # Avec Node.js
-   npx http-server
-   
-   # Avec PHP
-   php -S localhost:8000
-   ```
+Web & Frontend
 
-3. Accéder à `http://localhost:8000/index-new.html`
+<img src="https://skillicons.dev/icons?i=vue,vite,html,css" /><br/><br/>
 
----
+Engineering
 
-## 🔧 Modules
+<img src="https://skillicons.dev/icons?i=git,github,docker,linux,vscode" /></div><br/>Geospatial
 
-### 📱 NavigationModule (`js/navigation.js`)
-**Responsabilité** : Gestion de la navigation et du menu responsive
+<p align="center">"PostGIS" (https://img.shields.io/badge/PostGIS-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+"QGIS" (https://img.shields.io/badge/QGIS-589632?style=for-the-badge&logo=qgis&logoColor=white)
+"MapLibre" (https://img.shields.io/badge/MapLibre-396CB2?style=for-the-badge)
+"GeoJSON" (https://img.shields.io/badge/GeoJSON-5B5B5B?style=for-the-badge)
+"Vector Tiles" (https://img.shields.io/badge/Vector_Tiles-111827?style=for-the-badge)
 
-**Fonctionnalités** :
-- Menu hamburger pour mobile
-- Adaptation automatique selon la taille d'écran
-- Gestion des événements de redimensionnement
+</p>---
 
-**API** :
-```javascript
-NavigationModule.toggleMenu()      // Bascule le menu mobile
-NavigationModule.handleWindowResize() // Ajuste selon l'écran
-```
+What I build
 
-### 📑 TabsModule (`js/tabs.js`)
-**Responsabilité** : Système d'onglets et navigation entre sections
+<table>
+<tr>
+<td width="50%" valign="top">Data pipelines
 
-**Fonctionnalités** :
-- Affichage/masquage des sections
-- Gestion des états actifs
-- Retour à l'accueil via le logo
+ETL and data-processing workflows using Python, SQL and PostgreSQL/PostGIS.
 
-**API** :
-```javascript
-TabsModule.showSection(sectionId)     // Affiche une section
-TabsModule.resetTabsAndMainContent()  // Retour accueil
-```
+Focus on:
 
-### ✨ AnimationsModule (`js/animations.js`)
-**Responsabilité** : Animations et effets visuels
+- automation
+- reproducibility
+- data quality
+- maintainability
+- performance
 
-**Fonctionnalités** :
-- Animations au scroll (IntersectionObserver)
-- Effets de survol
-- Animations d'apparition (fade-in)
-- Performance optimisée (requestAnimationFrame)
+</td><td width="50%" valign="top">Backend & APIs
 
-**API** :
-```javascript
-AnimationsModule.fadeIn(element, delay)           // Animation fade-in
-AnimationsModule.addHoverAnimation(element, type) // Effet survol
-```
+Backend services designed to expose and process structured and spatial data.
 
-### 🎛️ PortfolioApp (`js/main.js`)
-**Responsabilité** : Orchestration générale de l'application
+Focus on:
 
-**Fonctionnalités** :
-- Initialisation des modules
-- Gestion des erreurs globales
-- Configuration centralisée
+- APIs
+- SQL optimisation
+- database architecture
+- business logic
+- data delivery
 
----
+</td>
+</tr><tr>
+<td width="50%" valign="top">WebGIS
 
-## 🎨 Styles
+Interactive geospatial applications using MapLibre, vector tiles and spatial APIs.
 
-### Variables CSS globales
-```css
-:root {
-    --primary-bg: #1b1f24;           /* Arrière-plan principal */
-    --text-color: #fff;              /* Couleur du texte */
-    --accent-color: #1e90ff;         /* Couleur d'accent */
-    --accent-shadow: rgba(30, 144, 255, 0.8); /* Ombre accent */
-    --border-radius: 15px;           /* Rayons des bordures */
-    --transition-speed: 0.3s;        /* Vitesse des transitions */
-    --font-family: 'Arial', sans-serif; /* Police principale */
-}
-```
+Focus on:
 
-### Modules CSS
-- **`base.css`** : Reset, typographie, styles globaux
-- **`navbar.css`** : Navigation, logo, menu hamburger
-- **`intro.css`** : Section héro, présentation personnelle
-- **`buttons.css`** : Boutons CTA, liens stylisés
-- **`icons.css`** : Grille d'icônes de compétences
-- **`projects.css`** : Sections projets, layout Flexbox
-- **`responsive.css`** : Media queries, adaptations mobiles
+- dynamic maps
+- spatial interaction
+- large datasets
+- territorial analysis
+- data visualisation
+
+</td><td width="50%" valign="top">Data monitoring
+
+Tools for monitoring and maintaining data infrastructure.
+
+Focus on:
+
+- database dependencies
+- freshness monitoring
+- anomaly detection
+- metadata
+- quality control
+
+</td>
+</tr>
+</table>---
+
+Geospatial × Data Engineering
+
+flowchart LR
+    A[Data Sources] --> B[Python ETL]
+    B --> C[PostgreSQL / PostGIS]
+    C --> D[Backend / API]
+    D --> E[Vector Tiles]
+    D --> F[Data Visualization]
+    E --> G[WebGIS]
 
 ---
 
-## 📱 Responsive Design
+Selected areas
 
-### Breakpoints
-- **Desktop** : > 768px
-- **Tablette** : 481px - 768px
-- **Mobile** : ≤ 480px
+data:
+  - ETL
+  - PostgreSQL
+  - PostGIS
+  - SQL
+  - Data quality
+  - Automation
 
-### Adaptations principales
-- Menu hamburger sur mobile
-- Images redimensionnées
-- Layout en colonne sur petits écrans
-- Espacement optimisé
-- Texte adaptatif
+backend:
+  - Node.js
+  - APIs
+  - Database architecture
+  - Monitoring
 
----
+geospatial:
+  - Spatial analysis
+  - Vector tiles
+  - MapLibre
+  - QGIS
+  - WebGIS
 
-## 🛠️ Développement
-
-### Ajout d'un nouveau module CSS
-1. Créer le fichier dans `css/`
-2. Ajouter l'import dans `css/main.css` :
-   ```css
-   @import url('./nouveau-module.css');
-   ```
-
-### Ajout d'un nouveau module JavaScript
-1. Créer le fichier dans `js/`
-2. Suivre le pattern :
-   ```javascript
-   const NouveauModule = {
-       init() {
-           // Initialisation
-           console.log('🆕 Nouveau module initialisé');
-       }
-   };
-   window.NouveauModule = NouveauModule;
-   ```
-3. Ajouter l'enregistrement dans `js/main.js` :
-   ```javascript
-   if (window.NouveauModule) {
-       this.registerModule('nouveau', window.NouveauModule);
-   }
-   ```
-
-### Debugging
-Le mode debug est activé par défaut. Pour le désactiver :
-```javascript
-// Dans js/main.js
-config: {
-    debug: false  // Désactive les logs
-}
-```
+frontend:
+  - Vue.js
+  - JavaScript
+  - TypeScript
+  - Vite
 
 ---
 
-## 🔄 Migration
+GitHub
 
-### De l'ancienne version vers la nouvelle
+<div align="center"><img height="165" src="https://github-readme-stats.vercel.app/api?username=Yanis1650&show_icons=true&hide_border=true&rank_icon=github" /><img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yanis1650&layout=compact&hide_border=true" /></div>---
 
-**Fichiers sauvegardés** :
-- `index.html` → Ancienne version HTML
-- `styles.css` → Ancien CSS monolithique  
-- `script.js` → Ancien JavaScript monolithique
+<div align="center">Build data. Understand space. Ship useful systems.
 
-**Nouveau point d'entrée** :
-- `index-new.html` → **Nouvelle version modulaire**
+<br/><a href="https://portfolio.drekky.fr/">
+  portfolio.drekky.fr
+</a><br/><br/>
 
-### Pour basculer définitivement :
-```bash
-# Sauvegarder l'ancienne version
-mv index.html index-old.html
-
-# Activer la nouvelle version
-mv index-new.html index.html
-```
-
----
-
-## 🎯 Sections du Portfolio
-
-1. **🗺️ Webmapping** : Cartes interactives, visualisations géographiques
-2. **🗺️ Cartographie** : Analyses cartographiques, data visualization  
-3. **💻 Code** : Projets de développement, scripts R/Python
-4. **🎨 Design** : Créations graphiques, posters scientifiques
-5. **🏢 Atelier** : Projets professionnels, rapports d'étude
-6. **🏘️ Urbanisme** : Planification urbaine, diagnostics territoriaux
-7. **🛰️ Télédétection** : Analyses d'images satellites, SIG
-
----
-
-## 📧 Contact
-
-**Yanis Lepesant**  
-📧 lepesantya@gmail.com  
-💼 [LinkedIn](https://www.linkedin.com/in/yanis-lepesant)  
-🎓 Master SIGAT - Géomatique
-
----
-
-**🚀 Version 2.0.0** - Architecture modulaire  
-*Développé avec ❤️ pour une meilleure maintenabilité* 
+<sub>
+Python · PostgreSQL · PostGIS · Backend · Data Engineering · WebGIS · Geospatial
+</sub></div>
